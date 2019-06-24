@@ -43,7 +43,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--RTL version:<link href="assets/demo/default/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
 		<!--end::Global Theme Styles -->
-		<link rel="shortcut icon" href="assets/demo/default/media/img/logo/favicon.ico" />
+		<link rel="shortcut icon" href="assets/img/logo.png" />
 	</head>
 
 	<!-- end::Head -->
@@ -58,19 +58,19 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="m-login__container">
 						<div class="m-login__logo">
 							<a href="#">
-								<img src="assets/app/media/img/logos/logo-1.png">
+								<img src="assets/img/logo.png">
 							</a>
 						</div>
 						<div class="m-login__signin">
 							<div class="m-login__head">
 								<h3 class="m-login__title">Sign In To Admin</h3>
 							</div>
-							<form class="m-login__form m-form" action="">
+							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post">
 								<div class="form-group m-form__group">
-									<input class="form-control m-input" type="text" placeholder="Email" name="email" autocomplete="off">
+									<input class="form-control m-input" type="email" placeholder="Email" name="email" id="inputEmail" autocomplete="off">
 								</div>
 								<div class="form-group m-form__group">
-									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">
+									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" id="inputPassword" required>
 								</div>
 								<div class="row m-login__form-sub">
 									<div class="col m--align-left m-login__form-left">
@@ -93,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<h3 class="m-login__title">Sign Up</h3>
 								<div class="m-login__desc">Enter your details to create your account:</div>
 							</div>
-							<form class="m-login__form m-form" action="">
+							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post">
 								<div class="form-group m-form__group">
 									<input class="form-control m-input" type="text" placeholder="Fullname" name="fullname">
 								</div>
@@ -126,9 +126,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								<h3 class="m-login__title">Forgotten Password ?</h3>
 								<div class="m-login__desc">Enter your email to reset your password:</div>
 							</div>
-							<form class="m-login__form m-form" action="">
+							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post" >
 								<div class="form-group m-form__group">
-									<input class="form-control m-input" type="text" placeholder="Email" name="email" id="m_email" autocomplete="off">
+									<input class="form-control m-input" placeholder="Email" type="email" name="email" id="inputEmail" autocomplete="off">
 								</div>
 								<div class="m-login__form-action">
 									<button id="m_login_forget_password_submit" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">Request</button>&nbsp;&nbsp;
@@ -146,7 +146,23 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 			</div>
 		</div>
-
+<!--  modelo prof
+		<form action="index.php?controller=Logon&action=logon" method="post" class="form-signin">
+		  <img class="mb-4" src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+		  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+		  <label for="inputEmail" class="sr-only">Email address</label>
+		  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		  <label for="inputPassword" class="sr-only">Password</label>
+		  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+		  <div class="checkbox mb-3">
+		    <label>
+		      <input type="checkbox" value="remember-me"> Remember me
+		    </label>
+		  </div>
+		  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+		</form>
+-->
 		<!-- end:: Page -->
 
 		<!--begin::Global Theme Bundle -->
