@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Metronic | Login Page - 2</title>
+		<title>DOE - SE &middot; Login</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!-- begin:: Page -->
 		<div class="m-grid m-grid--hor m-grid--root m-page">
-			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor m-login m-login--signin m-login--2 m-login-2--skin-1" id="m_login" style="background-image: url(assets/app/media/img//bg/bg-1.jpg);">
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor m-login m-login--signin m-login--2 m-login-2--skin-1" id="m_login" style="background-image: url(assets/img/bg.jpg);">
 				<div class="m-grid__item m-grid__item--fluid m-login__wrapper">
 					<div class="m-login__container">
 						<div class="m-login__logo">
@@ -63,7 +63,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<div class="m-login__signin">
 							<div class="m-login__head">
-								<h3 class="m-login__title">Sign In To Admin</h3>
+								<h3 class="m-login__title">&middot; DOE - SE &middot;</h3>
 							</div>
 							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post">
 								<div class="form-group m-form__group">
@@ -75,12 +75,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row m-login__form-sub">
 									<div class="col m--align-left m-login__form-left">
 										<label class="m-checkbox  m-checkbox--light">
-											<input type="checkbox" name="remember"> Remember me
+											<input type="checkbox" name="remember"> Lembrar-me
 											<span></span>
 										</label>
 									</div>
 									<div class="col m--align-right m-login__form-right">
-										<a href="javascript:;" id="m_login_forget_password" class="m-link">Forget Password ?</a>
+										<a href="javascript:;" id="m_login_forget_password" class="m-link">Esqueceu a senha?</a>
 									</div>
 								</div>
 								<div class="m-login__form-action">
@@ -90,7 +90,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<div class="m-login__signup">
 							<div class="m-login__head">
-								<h3 class="m-login__title">Sign Up</h3>
+								<h3 class="m-login__title">Entrar</h3>
 								<div class="m-login__desc">Enter your details to create your account:</div>
 							</div>
 							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post">
