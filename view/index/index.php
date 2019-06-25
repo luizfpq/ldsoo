@@ -87,9 +87,9 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!-- begin:: Page -->
 		<div class="m-grid m-grid--hor m-grid--root m-page">
-
-
-
+      <!-- begin::Header -->
+        <?php require 'header.php'; ?>
+      <!-- end::Header -->
 			<!-- begin::Body -->
 			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop 	m-container m-container--responsive m-container--xxl m-page__container m-body">
 
@@ -1137,7 +1137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end:: Global Optional Vendors -->
 
 		<!--begin::Global Theme Bundle -->
-		<script src="assets/default/demo/base/scripts.bundle.js" type="text/javascript"></script>
+		<script src="assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 
 		<!--end::Global Theme Bundle -->
 	</body>
