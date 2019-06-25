@@ -43,7 +43,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--RTL version:<link href="assets/demo/default/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
 		<!--end::Global Theme Styles -->
-		<link rel="shortcut icon" href="assets/img/logo.png" />
+		<link rel="shortcut icon" href="assets/img/logo-2.png" />
 	</head>
 
 	<!-- end::Head -->
@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="m-login__container">
 						<div class="m-login__logo">
 							<a href="#">
-								<img src="assets/img/logo.png">
+								<img src="assets/img/logo-2.png">
 							</a>
 						</div>
 						<div class="m-login__signin">
