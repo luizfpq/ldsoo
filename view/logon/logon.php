@@ -183,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Theme Bundle -->
 
 		<!--begin::Page Scripts -->
-		<script src="assets/snippets/custom/pages/user/login.js" type="text/javascript"></script>
+		<script src="assets/snippets/custom/pages/user/login6.js" type="text/javascript"></script>
 
 		<!--end::Page Scripts -->
 	</body>
