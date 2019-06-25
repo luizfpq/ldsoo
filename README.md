@@ -7,3 +7,4 @@ através de licença adquirida pelo docente.
 
 Corrigir mensagem de usuario ou senha incorretos no primeiro acesso
 Corrigir redirecionamento para a pagina de login ao tentar acessar o index.php
+Verificar funcionalidades necessárias
