@@ -64,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<div class="m-login__signin">
 							<div class="m-login__head">
-								<h3 class="m-login__title">&middot; DOE - SE &middot;</h3>
+								<h3 class="m-login__title"></h3>
 							</div>
 							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post">
 								<div class="form-group m-form__group">
