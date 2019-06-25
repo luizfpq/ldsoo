@@ -15,7 +15,7 @@ path="/var/www/html/ldsoo"
 # Do not edit the following section
 
 # Check if user is root
-[ $(id -u) != "0" ] && { echo "${CFAILURE}Error: You must run this script as root.${CEND}"; exit 1; } 2>&1
+#[ $(id -u) != "0" ] && { echo "${CFAILURE}Error: You must run this script as root.${CEND}"; exit 1; } 2>&1
 
 # Check if directory path exists
 if [[ "${path}" = "" ]]; then
