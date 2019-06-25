@@ -38,7 +38,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
 
 		<!--RTL version:<link href="assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
-		<link href="assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/demo/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
 		<!--RTL version:<link href="assets/demo/default/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
@@ -178,7 +178,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!--begin::Global Theme Bundle -->
 		<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+		<script src="assets/demo/base/scripts.bundle.js" type="text/javascript"></script>
 
 		<!--end::Global Theme Bundle -->
 
