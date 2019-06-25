@@ -72,12 +72,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end:: Global Optional Vendors -->
 
 		<!--begin::Global Theme Styles -->
-		<link href="assets/demo/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
 		<!--RTL version:<link href="assets/demo/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
 		<!--end::Global Theme Styles -->
-		<link rel="shortcut icon" href="assets/demo/media/img/logo/favicon.ico" />
+		<link rel="shortcut icon" href="assets/img/logo-2.png" />
 	</head>
 
 	<!-- end::Head -->
@@ -1137,7 +1137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end:: Global Optional Vendors -->
 
 		<!--begin::Global Theme Bundle -->
-		<script src="assets/demo/base/scripts.bundle.js" type="text/javascript"></script>
+		<script src="assets/default/demo/base/scripts.bundle.js" type="text/javascript"></script>
 
 		<!--end::Global Theme Bundle -->
 	</body>
