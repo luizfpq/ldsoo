@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="m-login__signup">
 							<div class="m-login__head">
 								<h3 class="m-login__title">Entrar</h3>
-								<div class="m-login__desc">Enter your details to create your account:</div>
+								<div class="m-login__desc">Entre com os dados para criar a conta:</div>
 							</div>
 							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post">
 								<div class="form-group m-form__group">
@@ -109,38 +109,38 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="row form-group m-form__group m-login__form-sub">
 									<div class="col m--align-left">
 										<label class="m-checkbox m-checkbox--light">
-											<input type="checkbox" name="agree">I Agree the <a href="#" class="m-link m-link--focus">terms and conditions</a>.
+											<input type="checkbox" name="agree">Eu concordo com os <a href="#" class="m-link m-link--focus">termos and condi&ccedil;&otilde;es</a>.
 											<span></span>
 										</label>
 										<span class="m-form__help"></span>
 									</div>
 								</div>
 								<div class="m-login__form-action">
-									<button id="m_login_signup_submit" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">Sign Up</button>&nbsp;&nbsp;
-									<button id="m_login_signup_cancel" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn">Cancel</button>
+									<button id="m_login_signup_submit" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">Cadastrar</button>&nbsp;&nbsp;
+									<button id="m_login_signup_cancel" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn">Cancelar</button>
 								</div>
 							</form>
 						</div>
 						<div class="m-login__forget-password">
 							<div class="m-login__head">
-								<h3 class="m-login__title">Forgotten Password ?</h3>
-								<div class="m-login__desc">Enter your email to reset your password:</div>
+								<h3 class="m-login__title">Esqueceu sua senha?</h3>
+								<div class="m-login__desc">Seu email para redefinir sua senha:</div>
 							</div>
 							<form class="m-login__form m-form" action="index.php?controller=Logon&action=logon" method="post" >
 								<div class="form-group m-form__group">
 									<input class="form-control m-input" placeholder="Email" type="email" name="email" id="inputEmail" autocomplete="off">
 								</div>
 								<div class="m-login__form-action">
-									<button id="m_login_forget_password_submit" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">Request</button>&nbsp;&nbsp;
-									<button id="m_login_forget_password_cancel" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn">Cancel</button>
+									<button id="m_login_forget_password_submit" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">Requisitar</button>&nbsp;&nbsp;
+									<button id="m_login_forget_password_cancel" class="btn m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn">Cancelar</button>
 								</div>
 							</form>
 						</div>
 						<div class="m-login__account">
 							<span class="m-login__account-msg">
-								Don't have an account yet ?
+								Ainda não está cadastrado?
 							</span>&nbsp;&nbsp;
-							<a href="javascript:;" id="m_login_signup" class="m-link m-link--light m-login__account-link">Sign Up</a>
+							<a href="javascript:;" id="m_login_signup" class="m-link m-link--light m-login__account-link">Cadastrar</a>
 						</div>
 					</div>
 				</div>
