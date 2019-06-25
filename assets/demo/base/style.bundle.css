@@ -35209,10 +35209,11 @@ select.m-select2 {
         transition: all 0.3s ease; }
       .m-header--minimize-on .m-brand .m-brand__logo .m-brand__logo-wrapper img {
         max-height: 36px;
-        max-height: max-content;
+        /*max-height: max-content;
         max-height: min-content;
         max-height: fit-content;
         max-height: fill-available;
+        */
         -webkit-transition: all 0.3s ease 0.3s;
         transition: all 0.3s ease 0.3s; }
   .m-brand .m-brand__tools {
