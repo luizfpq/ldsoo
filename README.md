@@ -2,3 +2,8 @@
 
 Utilizando recursos demonstrados em aula, associados ao tema metronic_v5.5.5, disponibilizado
 através de licença adquirida pelo docente.
+
+# TODO list
+
+Corrigir mensagem de usuario ou senha incorretos no primeiro acesso
+Corrigir redirecionamento para a pagina de login ao tentar acessar o index.php
