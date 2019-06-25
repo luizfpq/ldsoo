@@ -66,7 +66,7 @@ var SnippetLogin = function() {
                         }
                     }
                 }), r.valid() && (t.addClass("m-loader m-loader--right m-loader--light").attr("disabled", !0), r.ajaxSubmit({
-                    url: "",
+                    url: "index.php?controller=Logon&action=logon",
                     success: function(l, s, n, o) {
                         setTimeout(function() {
                             t.removeClass("m-loader m-loader--right m-loader--light").attr("disabled", !1), r.clearForm(), r.validate().resetForm(), a();
@@ -87,7 +87,7 @@ var SnippetLogin = function() {
                         }
                     }
                 }), r.valid() && (t.addClass("m-loader m-loader--right m-loader--light").attr("disabled", !0), r.ajaxSubmit({
-                    url: "",
+                    url: "index.php?controller=Logon&action=logon",
                     success: function(l, s, n, o) {
                         setTimeout(function() {
                             t.removeClass("m-loader m-loader--right m-loader--light").attr("disabled", !1), r.clearForm(), r.validate().resetForm(), a();
