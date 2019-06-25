@@ -100,7 +100,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
 										<a href="index.php" class="m-brand__logo-wrapper">
-											<img alt="" src="assets/img/logo-3.png" width="64px"/>
+											<img alt="" src="assets/img/logo-3.png" height="fit-content"/>
 										</a>
 									</div>
 								</div>
