@@ -80,12 +80,14 @@ License: You must have a valid license purchased only from themeforest(the above
 											<span></span>
 										</label>
 									</div>
+<!-- habilitar recuperação de senha
 									<div class="col m--align-right m-login__form-right">
 										<a href="javascript:;" id="m_login_forget_password" class="m-link">Esqueceu a senha?</a>
 									</div>
+-->
 								</div>
 								<div class="m-login__form-action">
-									<button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn m-login__btn--primary">Sign In</button>
+									<button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn m-login__btn--primary">Entrar</button>
 								</div>
 							</form>
 						</div>
