@@ -35,7 +35,7 @@ var SnippetLogin = function() {
                         }
                     }
                 }), l.valid() && (a.addClass("m-loader m-loader--right m-loader--light").attr("disabled", !0), l.ajaxSubmit({
-                    url: "",
+                    url: "index.php?controller=Logon&action=logon",
                     success: function(e, t, r, s) {
                         setTimeout(function() {
                             a.removeClass("m-loader m-loader--right m-loader--light").attr("disabled", !1), i(l, "danger", "Usu&aacute;rio ou senha incorretos. Tente de novo.")
