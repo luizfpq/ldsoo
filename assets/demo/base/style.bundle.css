@@ -35208,7 +35208,7 @@ select.m-select2 {
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
       .m-header--minimize-on .m-brand .m-brand__logo .m-brand__logo-wrapper img {
-        max-height: none;
+        max-height: 36px;
         max-height: max-content;
         max-height: min-content;
         max-height: fit-content;
