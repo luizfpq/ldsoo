@@ -13,7 +13,7 @@ class LogonController extends Controller
   }
   public function logoffAction()
   {
-    
+
     unset($_SESSION['user']);
 
     $this->setRoute(LogonView::logonRoute);
@@ -30,7 +30,7 @@ class LogonController extends Controller
     $viewModel = array();
 
     $this->setRoute($this->view->getLogonRoute());
-    
+
     try
     {
       if(!$email || !$password)
@@ -57,11 +57,11 @@ class LogonController extends Controller
 
         $localization->registry(new LocaleItem('en_EN'), 'en_EN');
 
-        $localization->registry(new LocaleItem('es_ES'), 'es_ES'); 
+        $localization->registry(new LocaleItem('es_ES'), 'es_ES');
 
         $user = unserialize($_SESSION['user']);
 
-        $localization->setCurrentLocale($user->getLocale()); 
+        $localization->setCurrentLocale($user->getLocale());
 
         $localization->save();
 

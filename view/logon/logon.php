@@ -44,6 +44,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 		<!--end::Global Theme Styles -->
 		<link rel="shortcut icon" href="assets/img/logo-2.png" />
+		<link rel="icon" href="assets/img/logo-2.png" />
 	</head>
 
 	<!-- end::Head -->
@@ -70,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<input class="form-control m-input" type="email" placeholder="Email" name="email" id="inputEmail" autocomplete="off">
 								</div>
 								<div class="form-group m-form__group">
-									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" id="inputPassword" required>
+									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Senha" name="password" id="inputPassword" required>
 								</div>
 								<div class="row m-login__form-sub">
 									<div class="col m--align-left m-login__form-left">
@@ -88,6 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</form>
 						</div>
+<!-- habilitar criar conta
 						<div class="m-login__signup">
 							<div class="m-login__head">
 								<h3 class="m-login__title">Entrar</h3>
@@ -121,6 +123,9 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</form>
 						</div>
+-->
+<!-- habilitar recuperação de senha
+
 						<div class="m-login__forget-password">
 							<div class="m-login__head">
 								<h3 class="m-login__title">Esqueceu sua senha?</h3>
@@ -136,12 +141,16 @@ License: You must have a valid license purchased only from themeforest(the above
 								</div>
 							</form>
 						</div>
+-->
+
+<!-- habilitar cadastro
 						<div class="m-login__account">
 							<span class="m-login__account-msg">
 								Ainda não está cadastrado?
 							</span>&nbsp;&nbsp;
 							<a href="javascript:;" id="m_login_signup" class="m-link m-link--light m-login__account-link">Cadastrar</a>
 						</div>
+-->
 					</div>
 				</div>
 			</div>

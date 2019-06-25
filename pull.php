@@ -1,7 +1,11 @@
 <?php
-
-shell_exec( ‘cd /var/www/html/ldsoo && git pull >> temp ’ );
-readfile('temp');
-echo file_get_contents('temp');
-
+function execPrint($command) {
+    $result = array();
+    exec($command, $result);
+    foreach ($result as $line) {
+        print($line . "\n");
+    }
+}
+// Print the exec output inside of a pre element
+print("<pre>" . execPrint("git pull") . "</pre>");
 ?>
