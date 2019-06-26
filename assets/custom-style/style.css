@@ -1,0 +1,29 @@
+h1,h2,h3,h4,h5,h6,.h3{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800!important;
+}
+
+.header{
+	border-bottom: 1px #ccc solid;
+	padding: 15px 30px;
+}
+.header .col{
+	margin-bottom: auto;
+	margin-top: auto;
+}
+
+.brand img{
+	margin-right: 10px;
+}
+.brand h3{
+	line-height: 1.2;
+}''
+input,button{
+	margin: 15px 0;
+	border-radius: 30px;
+}
+
+.btn-primary,.btn-primary:hover{
+	background: #16ADB6;
+	border-color:#16ADB6;
+}
