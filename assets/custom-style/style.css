@@ -1,12 +1,23 @@
 h1,h2,h3,h4,h5,h6,.h3{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 800!important;
+	margin-bottom: 0;
+}
+
+a,a:hover{
+	text-decoration: none!important;
 }
 
 .header{
 	border-bottom: 1px #ccc solid;
 	padding: 15px 30px;
+	background: #16ADB6;
 }
+
+.header a{
+	color:#FFF;
+}
+
 .header .col{
 	margin-bottom: auto;
 	margin-top: auto;
@@ -16,8 +27,8 @@ h1,h2,h3,h4,h5,h6,.h3{
 	margin-right: 10px;
 }
 .brand h3{
-	line-height: 1.2;
-}''
+	line-height: 1.5;
+}
 input,button{
 	margin: 15px 0;
 	border-radius: 30px;
@@ -26,4 +37,19 @@ input,button{
 .btn-primary,.btn-primary:hover{
 	background: #16ADB6;
 	border-color:#16ADB6;
+}
+
+.sidebar{
+	/*background: url("../img/logon-bg.jpg");*/
+	background-size:cover;
+	background-position: center;
+
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.list-group-item,.list-group-item:hover{
+	background:none;
+	border: none;
+	padding: 15px 45px;
 }

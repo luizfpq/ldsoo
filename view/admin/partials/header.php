@@ -12,7 +12,7 @@
 			</div>
 			<div class="col offset-lg-3">
 				<nav class="my-2 my-md-0 mr-md-3 float-right">
-			        <a class="p-2 text-dark" href="#">Sair</a>
+			        <a class="p-2" href="#"><i class="fas fa-user-circle"></i> Quirino</a>
 		      	</nav>
 			</div>
 		</div>
