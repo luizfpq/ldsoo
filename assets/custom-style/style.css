@@ -86,8 +86,8 @@ input,button{
 }
 
 .content{
-	margin-top: 75px;
-	min-height: 700px;
+	margin-top: 150px;
+	margin-bottom: 150px;
 }
 .content .col{
 	margin:0 15px;
@@ -144,7 +144,6 @@ input,button{
 }
 
 footer .row{
-	margin-top: 200px;
 	padding:75px 0;
 }
 
