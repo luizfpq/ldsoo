@@ -57,7 +57,7 @@
 
 					<div class="card activities resume col">
 						<a href="#">
-							<img src="assets\img\logon-bg.jpg" class="card-img-top" alt="...">
+							<img src="assets\img\activities.jpg" class="card-img-top" alt="...">
 						  	<div class="card-body">					  	
 					  		<h6><i class="fas fa-tasks"></i> Atividades</h6>
 							<p>
@@ -69,7 +69,7 @@
 
 					<div class="card sectors resume col">
 						<a href="#">
-							<img src="assets\img\logon-bg.jpg" class="card-img-top" alt="...">
+							<img src="assets\img\sectors.jpg" class="card-img-top" alt="...">
 						  	<div class="card-body">					  	
 					  		<h6><i class="fas fa-chart-pie"></i> Setores</h6>
 							<p>
@@ -81,7 +81,7 @@
 
 					<div class="card volunteers resume col">
 						<a href="#">
-							<img src="assets\img\logon-bg.jpg" class="card-img-top" alt="...">
+							<img src="assets\img\volunteers.jpg" class="card-img-top" alt="...">
 						  	<div class="card-body">					  	
 					  		<h6><i class="fas fa-hands-helping"></i> Voluntários</h6>
 							<p>
