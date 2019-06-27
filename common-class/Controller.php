@@ -25,7 +25,7 @@ class Controller
 
     if(!isset($user))
     {  
-      include ('view/admin/index.php');
+      include ('view/admin/schedule/index.php');
     }
     else
     {

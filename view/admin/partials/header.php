@@ -18,19 +18,44 @@
 			<nav class="col">
 		      <ul class="nav justify-content-center">
 				  <li class="nav-item">
-				    <a class="nav-link active" href="#"><i class="fas fa-home"></i> Início</a>
+				  	<?php
+				  	if($page_subject == "Início") 
+				    	echo '<a class="nav-link active" href="#"><i class="fas fa-home"></i> Início</a>';
+				    else
+				    	echo '<a class="nav-link" href="#">Início</a>';
+				    ?>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Eventos</a>
+				  	<?php
+				  	if($page_subject == "Eventos") 
+				    	echo '<a class="nav-link active" href="#"><i class="fas fa-calendar-check"></i> Eventos</a>';
+				    else
+				    	echo '<a class="nav-link" href="#">Eventos</a>';
+				    ?>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Atividades</a>
+				    <?php
+				  	if($page_subject == "Atividades") 
+				    	echo '<a class="nav-link active" href="#"><i class="fas fa-tasks"></i> Atividades</a>';
+				    else
+				    	echo '<a class="nav-link" href="#">Atividades</a>';
+				    ?>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Setores</a>
+				    <?php
+				  	if($page_subject == "Setores") 
+				    	echo '<a class="nav-link active" href="#"><i class="fas fa-chart-pie"></i> Setores</a>';
+				    else
+				    	echo '<a class="nav-link" href="#">Setores</a>';
+				    ?>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Voluntários</a>
+				    <?php
+				  	if($page_subject == "Voluntarios") 
+				    	echo '<a class="nav-link active" href="#"><i class="fas fa-hands-helping"></i> Voluntarios</a>';
+				    else
+				    	echo '<a class="nav-link" href="#">Voluntarios</a>';
+				    ?>
 				  </li>
 				</ul>
 		    </nav>

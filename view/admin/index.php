@@ -1,5 +1,7 @@
-<?php $page_title = "Paínel administrativo" ?>
-
+<?php
+	$page_title = "Paínel administrativo";
+	$page_subject = "Início";
+ ?>
 <?php include 'partials/head.php' ?>
 <?php include 'partials/header.php'?>
 
@@ -23,7 +25,9 @@
 					<div class="card col">
 						<div class="card-header">
 							<h5 class="card-title float-left"><i class="fas fa-calendar-check"></i> Próximos eventos</h5>
-							<button class="btn btn-sm btn-secondary float-right"><i class="fas fa-plus"></i> Mais eventos</button>
+							<button class="btn btn-sm btn-secondary float-right">
+								<small><i class="far fa-calendar-alt"></i> Todos eventos</small>
+							</button>
 						</div>					  
 					  <div class="card-body">
 					    <div class="list-group">

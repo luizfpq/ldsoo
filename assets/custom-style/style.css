@@ -72,12 +72,17 @@ input,button{
 
 
 .sidebar{
-	/*background: url("../img/logon-bg.jpg");*/
+	padding-top: 150px;
 	background-size:cover;
 	background-position: center;
 
+	background-color: rgba(22,173,182,0.05);
+
 	padding-left: 0;
 	padding-right: 0;
+}
+.sidebar .list-group-item{
+	background:none;
 }
 .sidebar-wrapper{
 	display: block;
@@ -86,8 +91,8 @@ input,button{
 }
 
 .content{
-	margin-top: 150px;
-	margin-bottom: 150px;
+	margin-top: 70px;
+	margin-bottom: 70px;
 }
 .content .col{
 	margin:0 15px;
@@ -136,6 +141,7 @@ input,button{
 .volunteers{
 	background: #9CB307;
 }
+
 .resume a{
 	color: #fff;
 }
