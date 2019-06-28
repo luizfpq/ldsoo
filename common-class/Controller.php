@@ -14,7 +14,7 @@ class Controller
 
   public function showView($viewModel = false)
   {
-    
+
     $localization = Localization::singleton();
 
     $localization->load();
@@ -24,18 +24,21 @@ class Controller
 
 
     if(!isset($user))
-    {  
-      include ('view/admin/schedule/index.php');
+    {
+      //include ('view/admin/schedule/index.php');
+      include ('view/logon/logon.php');
     }
     else
     {
-        include('view/index/header.php');
+        include('view/default/head.php');
+
+        include('view/default/header.php');
 
         include('view/default/message.php');
 
         include($this->route);
 
-        include('view/index/footer.php');
+        include('view/default/footer.php');
     }
   }
 

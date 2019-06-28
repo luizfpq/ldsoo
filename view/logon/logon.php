@@ -18,17 +18,17 @@
 
   	<div class="row h-100">
   		<div class="col-lg-6 form-wrapper">
-  			<form class="form-signin">
+  			<form class="form-signin" action="index.php?controller=Logon&action=logon" method="post">
 	  			<div class="container heading-form">
 	  				<div class="row brand">
 	  					<div class="col-4 col-lg-5"><img class="mb-4 float-right" src="assets/img/logo-2.png" alt="" width="72" height="72"></div>
-	  					<div class="col"><h1 class="text-left">DOE-SE</h1></div>	      			
+	  					<div class="col"><h1 class="text-left">DOE-SE</h1></div>
 	  				</div>
 	  			</div>
 		      <label for="inputEmail" class="sr-only">Endereço de email</label>
-		      <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+		      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
 		      <label for="inputPassword" class="sr-only">Senha</label>
-		      <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+		      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
 		      <div class="checkbox mb-3">
 		        <label>
 		          <input type="checkbox" value="remember-me"> Lembrar de mim

@@ -33,7 +33,7 @@ class LogonController extends Controller
 
     try
     {
-      if(!empty( $_POST ) && (!$email || !$password)) //@// TODO: confirmar a lógica 
+      if(!$email || !$password)
         throw new Exception('Preencha todos os campos.');
 
       $logon = new Logon();
