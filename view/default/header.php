@@ -20,7 +20,7 @@
 		      <ul class="nav justify-content-center">
 				  <li class="nav-item">
 				  	<?php
-				  	if($page_subject == "Index")
+				  	if($page_subject == "Index" || $page_subject == "Logon")
 				    	echo '<a class="nav-link active" href="#"><i class="fas fa-home"></i> Início</a>';
 				    else
 				    	echo '<a class="nav-link" href="index.php?controller=Index&action=index">Início</a>';
