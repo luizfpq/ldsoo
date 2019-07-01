@@ -1,15 +1,15 @@
 <?php
 
-class VolunteerView
+class ScheduleView
 {
 
-	const volunteerRoute = 'view/volunteer/index.php';
+	const scheduleRoute = 'view/schedule/index.php';
 
   	public function __construct(){}
 
-  	public function getVolunteerRoute(){
+  	public function getScheduleRoute(){
 
-    	return self::volunteerRoute;
+    	return self::scheduleRoute;
   	}
 
 

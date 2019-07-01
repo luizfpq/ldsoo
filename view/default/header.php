@@ -31,15 +31,15 @@
 				  	if($page_subject == "Schedule")
 				    	echo '<a class="nav-link active" href="#"><i class="fas fa-calendar-check"></i> Eventos</a>';
 				    else
-				    	echo '<a class="nav-link" href="index.php?controller=Schedule&action=index">Eventos</a>';
+				    	echo '<a class="nav-link" href="index.php?controller=Schedule&action=schedule">Eventos</a>';
 				    ?>
 				  </li>
 				  <li class="nav-item">
 				    <?php
-				  	if($page_subject == "Activities")
+				  	if($page_subject == "Activity")
 				    	echo '<a class="nav-link active" href="#"><i class="fas fa-tasks"></i> Atividades</a>';
 				    else
-				    	echo '<a class="nav-link" href="#">Atividades</a>';
+				    	echo '<a class="nav-link" href="index.php?controller=Activity&action=activity">Atividades</a>';
 				    ?>
 				  </li>
 				  <li class="nav-item">
@@ -47,7 +47,7 @@
 				  	if($page_subject == "Sectors")
 				    	echo '<a class="nav-link active" href="#"><i class="fas fa-chart-pie"></i> Setores</a>';
 				    else
-				    	echo '<a class="nav-link" href="#">Setores</a>';
+				    	echo '<a class="nav-link" href="index.php?controller=Index&action=sector">Setores</a>';
 				    ?>
 				  </li>
 				  <li class="nav-item">

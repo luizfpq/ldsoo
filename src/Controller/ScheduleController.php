@@ -1,6 +1,6 @@
 <?php
 
-class VolunteerController extends Controller
+class ScheduleController extends Controller
 {
   private $view;
 
@@ -8,12 +8,12 @@ class VolunteerController extends Controller
 
   public function __construct(){
 
-    $this->view = new VolunteerView();
+    $this->view = new ScheduleView();
   }
 
-  public function volunteerAction(){
+  public function scheduleAction(){
 
-    $this->setRoute($this->view->getVolunteerRoute());
+    $this->setRoute($this->view->getScheduleRoute());
 
     $this->showView();
 
