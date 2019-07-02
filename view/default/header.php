@@ -5,7 +5,7 @@
 		<div class="row topbar">
 			<div class="col">
 				<div class="brand">
-					<a href="/ldsoo">
+					<a href="index.php?controller=Index&action=index">
 						<img src="assets/img/logo-2.png" alt="" width="36" height="36" class="float-left">
 						<h3 class="text-left">DOE-SE</h3>
 					</a>
@@ -21,7 +21,7 @@
 				  <li class="nav-item">
 				  	<?php
 				  	if($page_subject == "Index" || $page_subject == "Logon")
-				    	echo '<a class="nav-link active" href="#"><i class="fas fa-home"></i> Início</a>';
+				    	echo '<a class="nav-link active" href="?controller=Index&action=index"><i class="fas fa-home"></i> Início</a>';
 				    else
 				    	echo '<a class="nav-link" href="index.php?controller=Index&action=index">Início</a>';
 				    ?>
@@ -29,7 +29,7 @@
 				  <li class="nav-item">
 				  	<?php
 				  	if($page_subject == "Schedule")
-				    	echo '<a class="nav-link active" href="#"><i class="fas fa-calendar-check"></i> Eventos</a>';
+				    	echo '<a class="nav-link active" href="?controller=Schedule&action=schedule"><i class="fas fa-calendar-check"></i> Eventos</a>';
 				    else
 				    	echo '<a class="nav-link" href="index.php?controller=Schedule&action=schedule">Eventos</a>';
 				    ?>
@@ -37,7 +37,7 @@
 				  <li class="nav-item">
 				    <?php
 				  	if($page_subject == "Activity")
-				    	echo '<a class="nav-link active" href="#"><i class="fas fa-tasks"></i> Atividades</a>';
+				    	echo '<a class="nav-link active" href="?controller=Activity&action=activity"><i class="fas fa-tasks"></i> Atividades</a>';
 				    else
 				    	echo '<a class="nav-link" href="index.php?controller=Activity&action=activity">Atividades</a>';
 				    ?>
@@ -45,15 +45,15 @@
 				  <li class="nav-item">
 				    <?php
 				  	if($page_subject == "Sectors")
-				    	echo '<a class="nav-link active" href="#"><i class="fas fa-chart-pie"></i> Setores</a>';
+				    	echo '<a class="nav-link active" href="?controller=Sector&action=sector"><i class="fas fa-chart-pie"></i> Setores</a>';
 				    else
-				    	echo '<a class="nav-link" href="index.php?controller=Index&action=sector">Setores</a>';
+				    	echo '<a class="nav-link" href="index.php?controller=Sector&sector=index">Setores</a>';
 				    ?>
 				  </li>
 				  <li class="nav-item">
 				    <?php
 				  	if($page_subject == "Volunteer")
-				    	echo '<a class="nav-link active" href="#"><i class="fas fa-hands-helping"></i> Voluntarios</a>';
+				    	echo '<a class="nav-link active" href="?controller=Volunteer&action=volunteer"><i class="fas fa-hands-helping"></i> Voluntarios</a>';
 				    else
 				    	echo '<a class="nav-link" href="index.php?controller=Volunteer&action=volunteer">Voluntarios</a>';
 				    ?>
