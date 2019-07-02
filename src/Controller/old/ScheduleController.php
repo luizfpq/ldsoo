@@ -50,13 +50,13 @@ class UserController extends Controller
             $warnings [] = 'Senha';
 
           if(sizeof($warnings))
-            throw new Exception ('Preencha os campos ' . implode(', ', $warnings)); 
+            throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
 
-  
+
 
           /*$user = UserFactory::factory($identifcationNumber, $type);
 
-          $message->addMessage('O usuário instanciado é do tipo: '. get_class($user) ); 
+          $message->addMessage('O usuário instanciado é do tipo: '. get_class($user) );
           */
           $user = new User();
 
@@ -103,6 +103,7 @@ class UserController extends Controller
     $message->save();
   }
 
+
   public function deleteAction(){
 
     $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
@@ -116,12 +117,12 @@ class UserController extends Controller
 
       $this->setRoute($this->view->getListRoute());
 
-      $userDao->delete($id); 
+      $userDao->delete($id);
 
       $viewModel = array(
           'users' => $userDao->getAll()
       );
-      
+
     }
     else
     {
