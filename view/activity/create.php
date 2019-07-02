@@ -1,3 +1,11 @@
+<?php
+	$page_title = "Registrar novo evento";
+	$page_subject = "Eventos";
+ ?>
+
+<?php include 'view/admin/partials/head.php' ?>
+<?php include 'view/admin/partials/header.php'?>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
@@ -22,6 +30,7 @@
 						      <option>Illuminati</option>
 						    </select>
 						</div>
+						<hr>
 					</div>
 					<div class="card col">
 						<div class="card-header">
@@ -64,6 +73,9 @@
 		</div>
 	</div>
 </div>
+<!-- Fim do conteúdo -->
+<?php include 'view/admin/partials/footer.php'?>
+
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
 	  var calendarEl = document.getElementById('calendar');
@@ -78,3 +90,5 @@
 	  calendar.render();
 	});
 </script>
+
+</body>
