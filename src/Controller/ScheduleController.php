@@ -67,8 +67,8 @@ class ScheduleController extends Controller
           $schedule->setDate($date);
           $schedule->setCategory($category);
           $schedule->setUser($_user);
-          $schedule->setCreate($create);
-          $schedule->setUpdate($update);
+          $schedule->setCreate($_create);
+          $schedule->setUpdate($_update);
           $schedule->setOrder($order);
           $schedule->setDescription($description);
 
