@@ -1,0 +1,48 @@
+"INSERT INTO schedule_category (name, description, _user, _create, _update, _order) VALUES (?,?,?,?,?,?)";
+
+"UPDATE schedule_category SET name = ?, description = ?, _user = ?, _create = ?, _update = ?, _order = ? WHERE id = ?";
+
+"SELECT * FROM schedule_category WHERE id = ?";
+
+"SELECT * FROM schedule_category";
+
+"DELETE  FROM schedule_category WHERE id = ?";
+
+
+"INSERT INTO schedule (date, category, _user, _create, _update, _order, description) VALUES (?,?,?,?,?,?,?)";
+
+"UPDATE schedule SET date = ?, category = ?, _user = ?, _create = ?, _update = ?, _order = ? description = ? WHERE id = ?";
+
+"SELECT * FROM schedule WHERE id = ?";
+
+"SELECT * FROM schedule";
+
+"DELETE  FROM schedule WHERE id = ?";
+
+"SELECT * FROM schedule WHERE _user = ? ";
+
+"SELECT * FROM schedule WHERE category = ?";
+
+"SELECT * FROM schedule WHERE date = ?";
+
+
+"INSERT INTO volunteer (name, userName, password, role) VALUES (?,?,?,?)";
+
+"UPDATE volunteer SET name = ?, userName = ?, password = ?, role = ? WHERE id = ?";
+
+"SELECT * FROM volunteer WHERE id = ?";
+
+"SELECT * FROM volunteer";
+
+"DELETE  FROM volunteer WHERE id = ?";
+
+
+"INSERT INTO schedule (name, description, _user, _create, _update, category) VALUES (?,?,?,?,?,?)";
+
+"UPDATE schedule SET name = ?, description = ?, _user = ?, _create = ?, _update = ?, category = ? WHERE id = ?";
+
+"SELECT * FROM schedule WHERE id = ?";
+
+"SELECT * FROM schedule";
+
+"DELETE  FROM schedule WHERE id = ?";
