@@ -38,6 +38,10 @@ a,a:hover{
 	color: #fff;
 }
 
+.form-control{
+	margin-top: 0;
+}
+
 .header nav .active{
 	background: #fff;
 	color: #16ADB6;
@@ -133,8 +137,9 @@ input,button{
 .resume .card-body{
 	padding: 20px 25px;
 }
-.activities{
+.activities, .activities:hover{
 	background: #F8AA06;
+	border: none;
 }
 .sectors{
 	background: #0B3450;

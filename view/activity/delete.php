@@ -8,7 +8,7 @@
 			<form class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-plus"></i> Nova atividade</h1>
+						<h1><i class="fas fa-plus"></i> Remover atividade</h1>
 						<hr>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 				</div>
 				
 				<div class="row">
-					<button type="submit" class="col activities btn btn-lg btn-primary"><i class="fas fa-plus"></i> Nova atividade</button>
+					<button type="submit" class="col btn btn-lg btn-danger"><i class="fas fa-trash"></i> Remover atividade</button>
 				</div>
 			</form>
 		</div>
