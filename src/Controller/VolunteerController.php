@@ -36,6 +36,9 @@ class VolunteerController extends Controller
       $email = isset($_POST['email']) ? $_POST['email'] : null;
 
       $password = isset($_POST['password']) ? $_POST['password'] : null;
+
+      $role = isset($_POST['role']) ? $_POST['role'] : null;
+
       try
       {
           $warnings = array();
@@ -59,7 +62,10 @@ class VolunteerController extends Controller
           $volunteer->setUsername($username);
           $volunteer->setEmail($email);
           $volunteer->setPassword($password);
-          //$volunteer->setRole($role);
+          $volunteer->setRole($role);
+
+
+
 
           $volunteerId = $volunteerDao->create($volunteer);
 
@@ -102,18 +108,41 @@ class VolunteerController extends Controller
         'volunteers' => $volunteers,
     );
 
-    $message->addMessage('Listando voluntários.');
+    //$message->addMessage('Listando voluntários.');
 
-    $message->save();
+    //$message->save();
 
     $this->showView($viewModel);
   }
 
   public function deleteAction(){
 
-    $this->setRoute($this->view->getDeleteRoute());
+    $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 
-    $this->showView();
+    $volunteerDao = new VolunteerDao();
+
+    $viewModel = false;
+
+    if(isset($_REQUEST['submit']))
+    {
+      $this->setRoute($this->view->getListRoute());
+
+      $volunteerDao->delete($id);
+
+      $viewModel = array(
+          'volunteers' => $volunteerDao->getAll()
+      );
+    }
+    else
+    {
+      $this->setRoute($this->view->getDeleteRoute());
+
+      $viewModel = array(
+          'volunteer' => $volunteerDao->getById($id)
+      );
+    }
+
+    $this->showView($viewModel);
 
   }
 
@@ -127,9 +156,46 @@ class VolunteerController extends Controller
 
   public function updateAction(){
 
-    $this->setRoute($this->view->getUpdateRoute());
+    $viewModel = false;
 
-    $this->showView();
+    $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
+
+    if(isset($_REQUEST['submit']))
+    {
+
+      $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : '';
+      $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : '';
+      $role = isset($_REQUEST['role']) ? $_REQUEST['role'] : '';
+
+      $volunteer = new Volunteer();
+      $volunteer->setUsername($username);
+      $volunteer->setEmail($email);
+      $volunteer->setRole($role);
+      $volunteer->setId($id);
+
+
+      $volunteerDao = new VolunteerDao();
+      $volunteerDao->update($volunteer);
+
+      $this->setRoute($this->view->getListRoute());
+
+      $viewModel = array(
+        'volunteers' => $volunteerDao->getAll()
+      );
+
+    }
+    else
+    {
+      $this->setRoute($this->view->getUpdateRoute());
+
+      $volunteerDao = new VolunteerDao();
+
+      $viewModel = array(
+          'volunteer' => $volunteerDao->getById($id)
+      );
+    }
+
+    $this->showView($viewModel);
 
   }
 }

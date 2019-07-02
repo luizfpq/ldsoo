@@ -12,7 +12,9 @@
 				</div>
 			</div>
 			<div class="col">
-		        <a class="float-right" href="#"><i class="fas fa-user-circle"></i> <?php echo "&middot; {$user->getUsername()} &middot;"; ?></a>
+				<a class="float-right" href="#"><i class="fas fa-user-circle"></i> <?php echo "&middot; {$user->getUsername()} &middot;"; ?></a>
+				<a class="float-right" href="index.php?controller=Logon&action=logoff"><i class="fa fa-sign-out" aria-hidden="true"></i> <?php echo "Sair"; ?></a>
+
 		    </div>
 		</div>
 		<div class="row">

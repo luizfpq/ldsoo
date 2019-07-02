@@ -9,7 +9,7 @@ class VolunteerDao
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO volunteer (username,email, password,role) VALUES (?,?,?,?)";
+    $sql = "INSERT INTO volunteer (username,email, password, role) VALUES (?,?,?,?)";
 
     echo '<script>';
     echo 'console.log('. json_encode( $sql ) .')';
@@ -51,6 +51,7 @@ class VolunteerDao
 
       $volunteer->setUsername($obj->username);
       $volunteer->setEmail($obj->email);
+      $volunteer->setRole($obj->role);
       $volunteer->setId($obj->id);
 
       return $volunteer;
@@ -67,9 +68,9 @@ class VolunteerDao
 
     $sth->bindValue(1, $volunteer->getUsername(), PDO::PARAM_STR);
 
-    $sth->bindValue(2, sha1($volunteer->getEmail()), PDO::PARAM_STR);
+    $sth->bindValue(2, $volunteer->getEmail(), PDO::PARAM_STR);
 
-		$sth->bindValue(3, sha1($volunteer->getRole()), PDO::PARAM_STR);
+		$sth->bindValue(3, $volunteer->getRole(), PDO::PARAM_STR);
 
     $sth->bindValue(4, $volunteer->getId(), PDO::PARAM_STR);
 

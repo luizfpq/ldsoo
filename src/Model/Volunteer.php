@@ -12,9 +12,9 @@ class Volunteer
 
   public function __construct() { }
 
-  public function setRole($lole){ $this->lole = $lole; }
+  public function setRole($role){ $this->role = $role; }
 
-  public function getRole() { return $this->lole; }
+  public function getRole() { return $this->role; }
 
   public function setLocale($locale){ $this->locale = $locale; }
 

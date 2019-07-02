@@ -23,15 +23,11 @@
 								    <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
 							  	</div>
 									<div class="mb-3">
-		          <label for="group">Grupo</label>
-		          <select multiple name="group[]" class="form-control" id="group">
-
-		          <?php foreach($viewModel['groups'] as $group) : ?>
-
-		            <option value="<?= $group->getId()?>"><?= $group->getName()?></option>
-
-		          <?php endforeach; ?>
-
+		          <label for="group">Função</label>
+		          <select name="role" class="form-control" id="role">
+									<option value="2" >Colaborador</option>
+									<option value="1" >Organizador</option>
+									<option value="0" >Adm</option>
 		          </select>
 
 		        </div>

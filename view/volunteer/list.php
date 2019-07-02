@@ -9,9 +9,8 @@
 				<div class="row">
 					<div class="col">
 						<h1><i class="fas fa-hands-helping"></i> Listagem de usuários</h1>
-						<hr>
 
-            <table class="table table-stripped table-condensed">
+            <table class="table table-stripped table-hover table-condensed">
               <thead>
                 <tr>
                   <th scope="col"></th>
