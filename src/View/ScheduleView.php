@@ -11,6 +11,8 @@ class ScheduleView
 
   	const deleteRoute = 'view/schedule/delete.php';
 
+  	const detailsRoute = 'view/schedule/details.php';
+
   	const listRoute = 'view/schedule/list.php';
 
   	public function __construct(){}
@@ -33,6 +35,11 @@ class ScheduleView
 	  public function getDeleteRoute(){
 
 	    return self::deleteRoute;
+	  }
+
+	  public function getDetailsRoute(){
+
+	    return self::detailsRoute;
 	  }
 
 	  public function getListRoute(){

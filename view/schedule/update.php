@@ -8,7 +8,7 @@
 			<form class="container-fluid">
 				<div class="row">
 					<div class="col-md-8">
-						<h1><i class="far fa-calendar-plus"></i> Novo evento</h1>
+						<h1><i class="far fa-calendar-check"></i> Atualizar evento</h1>
 						<hr>
 						<div class="form-group">
 						    <label for="description">Descrição do evento</label>
@@ -58,7 +58,7 @@
 				</div>
 
 				<div class="row">
-					<button type="submit" class="col btn btn-lg btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</button>
+					<button type="submit" class="col btn btn-lg btn-primary"><i class="fas fa-pen"></i> Salvar alterações</button>
 				</div>
 			</form>
 		</div>
