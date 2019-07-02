@@ -1,15 +1,20 @@
 <?php
 
-class User
+class Volunteer
 {
   private $username;
   private $email;
   private $id;
   private $password;
   private $locale;
-	private $role;
+  private $role;
+
 
   public function __construct() { }
+
+  public function setRole($lole){ $this->lole = $lole; }
+
+  public function getRole() { return $this->lole; }
 
   public function setLocale($locale){ $this->locale = $locale; }
 
@@ -30,10 +35,6 @@ class User
   public function getPassword() { return $this->password; }
 
   public function setPassword($password) { $this->password = $password; }
-
-	public function getRole() { return $this->role; }
-
-  public function setRole($role) { $this->role = $role; }
 
 
 }

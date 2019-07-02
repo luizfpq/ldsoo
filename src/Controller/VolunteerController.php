@@ -23,11 +23,14 @@ class VolunteerController extends Controller
 
     $message = Message::singleton();
 
-    //$viewModel = false;
     $this->setRoute($this->view->getCreateRoute());
 
     if(isset($_REQUEST['submit']))
     {
+
+
+
+
       $username = isset($_POST['username']) ? $_POST['username'] : null;
 
       $email = isset($_POST['email']) ? $_POST['email'] : null;
@@ -51,25 +54,18 @@ class VolunteerController extends Controller
 
 
           $volunteer = new Volunteer();
-
           $volunteerDao = new VolunteerDao();
 
           $volunteer->setUsername($username);
           $volunteer->setEmail($email);
           $volunteer->setPassword($password);
-          $volunteer->setGroup($group);
+          //$volunteer->setRole($role);
 
           $volunteerId = $volunteerDao->create($volunteer);
 
           $volunteer->setId($volunteerId);
 
-          $volunteerDao->setGroup($volunteer);
-
-           $this->setRoute($this->view->getListRoute());
-
-          $viewModel = array(
-            'users' => $volunteerDao->getAll()
-          );
+          $this->setRoute($this->view->getVolunteerRoute());
 
           $message->addMessage('Usuário adicionado com sucesso.');
       }
@@ -79,18 +75,38 @@ class VolunteerController extends Controller
       }
     }
 
+    $message->save();
+
     $this->showView();
 
-    $message->save();
+
 
   }
 
-  public function listAction(){
+  /*
+    O Controlador recebe da view uma ação, que deverá ser executada pelo Model.
+    O Model realiza a ação e prepara os dados para a view, por meio do Controller.
+
+  */
+  public function listAction() {
+
+    $message = Message::singleton();
 
     $this->setRoute($this->view->getListRoute());
 
-    $this->showView();
+    $volunteerDao = new VolunteerDao();
 
+    $volunteers = $volunteerDao->getAll();
+
+    $viewModel = array(
+        'volunteers' => $volunteers,
+    );
+
+    $message->addMessage('Listando voluntários.');
+
+    $message->save();
+
+    $this->showView($viewModel);
   }
 
   public function deleteAction(){

@@ -46,7 +46,7 @@
 				</div>
 
 				<div class="row">
-					<button type="submit" class="col btn btn-lg btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</button>
+					<button type="submit" class="col btn btn-lg btn-primary" name="submit"><i class="far fa-calendar-plus"></i> Novo evento</button>
 				</div>
 			</form>
 		</div>

@@ -2,7 +2,7 @@
 
 class VolunteerDao
 {
-  public function __construct(){}
+  public function __construct(){ }
 
   public function create($volunteer)
   {
@@ -122,16 +122,13 @@ class VolunteerDao
     while($obj = $sth->fetch(PDO::FETCH_OBJ))
     {
       $volunteer = new Volunteer();
+      $volunteer->setId($obj->id);
       $volunteer->setUsername($obj->username);
       $volunteer->setEmail($obj->email);
-			$volunteer->setRole($obj->role);
-      $volunteer->setId($obj->id);
+      $volunteer->setRole($obj->role);
 
       $volunteers[] = $volunteer;
-
     }
-
-
 
     return $volunteers;
   }
