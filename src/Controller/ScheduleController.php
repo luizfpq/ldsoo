@@ -91,11 +91,11 @@ class ScheduleController extends Controller
     }
     else
     {
-         $scheduleCategoryDB = new scheduleCategoryDB();
+         //$scheduleCategoryDB = new scheduleCategoryDB();
 
-         $viewModel = array(
-            'categories' => $scheduleCategoryDB->getAll()
-          );
+         //$viewModel = array(
+        //    'categories' => $scheduleCategoryDB->getAll()
+        //  );
 
          $this->setRoute($this->view->getCreateRoute());
 

@@ -46,10 +46,10 @@
 				  </li>
 				  <li class="nav-item">
 				    <?php
-				  	if($page_subject == "Sectors")
+				  	if($page_subject == "Sector")
 				    	echo '<a class="nav-link active" href="?controller=Sector&action=sector"><i class="fas fa-chart-pie"></i> Setores</a>';
 				    else
-				    	echo '<a class="nav-link" href="index.php?controller=Sector&sector=index">Setores</a>';
+				    	echo '<a class="nav-link" href="index.php?controller=Sector&action=sector">Setores</a>';
 				    ?>
 				  </li>
 				  <li class="nav-item">

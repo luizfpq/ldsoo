@@ -3,13 +3,13 @@
 	$page_subject = "Eventos";
  ?>
 
-<?php include 'view/admin/partials/head.php' ?>
-<?php include 'view/admin/partials/header.php'?>
+<?php include 'view/default/head.php' ?>
+<?php include 'view/default/header.php'?>
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
-			<?php include 'view/admin/partials/sidebar.php' ?>
+			<?php include 'view/default/sidebar.php' ?>
 		</div>	
 <!-- Conteudo -->
 		<div class="content col-10">
@@ -98,7 +98,7 @@
 	</div>
 </div>
 <!-- Fim do conteúdo -->
-<?php include 'view/admin/partials/footer.php'?>
+<?php include 'view/default/footer.php'?>
 
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {

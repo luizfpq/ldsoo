@@ -2,15 +2,15 @@
 
 class ScheduleCategoryDB{
 
-	
-	public function __construct(){}
-	
 
-    public function create($scheduleCategory){ 
-    
+	public function __construct(){}
+
+
+    public function create($scheduleCategory){
+
     $db = Database::singleton();
 
-    $sql = "INSERT INTO _scheduleCategory (name,description, user, create, update, order) VALUES (?,?,?,?,?,?)";
+    $sql = "INSERT INTO schedule_category (name,description, _user, _create, _update, order) VALUES (?,?,?,?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -20,14 +20,14 @@ class ScheduleCategoryDB{
 
     $sth->bindValue(3, $scheduleCategory->getUser(), PDO::PARAM_STR);
 
-    $sth->bindValue(4, $scheduleCategory->getCreate(), PDO::PARAM_STR);    
+    $sth->bindValue(4, $scheduleCategory->getCreate(), PDO::PARAM_STR);
 
     $sth->bindValue(5, $scheduleCategory->getUpdate(), PDO::PARAM_STR);
 
     $sth->bindValue(6, $scheduleCategory->getOrder(), PDO::PARAM_STR);
 
-    
-    
+
+
     if($sth->execute())
       return $db->lastInsertId();;
 
@@ -37,10 +37,10 @@ class ScheduleCategoryDB{
 
   public function getById($id)
   {
-    
+
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM _scheduleCategory WHERE id = ?";
+    $sql = "SELECT * FROM schedule_category WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -63,8 +63,8 @@ class ScheduleCategoryDB{
 
     $db = Database::singleton();
 
-    $sql = "UPDATE _scheduleCategory SET name = ?, description =  ? WHERE id = ?";
-    
+    $sql = "UPDATE schedule_category SET name = ?, description =  ? WHERE id = ?";
+
     $sth = $db->prepare($sql);
 
      $sth->bindValue(1, $scheduleCategory->getName(), PDO::PARAM_STR);
@@ -73,7 +73,7 @@ class ScheduleCategoryDB{
 
     $sth->bindValue(3, $scheduleCategory->getUser(), PDO::PARAM_STR);
 
-    $sth->bindValue(4, $scheduleCategory->getCreate(), PDO::PARAM_STR);    
+    $sth->bindValue(4, $scheduleCategory->getCreate(), PDO::PARAM_STR);
 
     $sth->bindValue(5, $scheduleCategory->getUpdate(), PDO::PARAM_STR);
 
@@ -81,7 +81,7 @@ class ScheduleCategoryDB{
 
 
     $sth->execute();
-     
+
   }
 
 
@@ -89,7 +89,7 @@ class ScheduleCategoryDB{
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM _scheduleCategory WHERE id = ?";
+    $sql = "DELETE FROM schedule_category WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -103,7 +103,7 @@ class ScheduleCategoryDB{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM  _scheduleCategory";
+    $sql = "SELECT * FROM  schedule_category";
 
     $sth = $db->prepare($sql);
 
@@ -119,7 +119,7 @@ class ScheduleCategoryDB{
       $scheduleCategory->setId($obj->id);
 
       $schedulesCategory[] = $scheduleCategory;
-      
+
     }
 
     return $schedulesCategory;

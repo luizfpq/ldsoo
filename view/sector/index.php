@@ -3,14 +3,12 @@
 	$page_subject = "Eventos";
  ?>
 
-<?php include 'view/admin/partials/head.php' ?>
-<?php include 'view/admin/partials/header.php'?>
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
 			<?php include 'sidebar.php' ?>
-		</div>	
+		</div>
 <!-- Conteudo -->
 		<div class="content col-10">
 			<div class="container-fluid">
@@ -25,8 +23,8 @@
 					</div>
 					<div class="card col">
 						<div class="card-header">
-							<h5 class="card-title float-left"><i class="fas fa-fire-alt"></i> Próximo evento</h5>							
-						</div>					  
+							<h5 class="card-title float-left"><i class="fas fa-fire-alt"></i> Próximo evento</h5>
+						</div>
 					  <div class="card-body">
 					    <div class="list-group">
 						  <a href="?controller=Schedule&action=details&id=1" class="list-group-item list-group-item-action">
@@ -35,7 +33,7 @@
 						      <small>Em 3 dias</small>
 						    </div>
 						    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Mauris lacinia, velit in iaculis finibus, lacus mi tempor leo, vitae hendrerit dolor ligula a urna.</p>
-						  </a>						  
+						  </a>
 						</div>
 					  </div>
 					  <div class="card-footer">
@@ -43,7 +41,7 @@
 					  </div>
 					</div>
 				</div>
-				
+
 				<div class="row">
 
 					<div class="card resume col col-md-8">
@@ -53,8 +51,8 @@
 								<small><i class="far fa-calendar-alt"></i> Todos eventos</small>
 							</a>
 						</div>
-						<div class="card-body" id="calendar">					  	
-					  		
+						<div class="card-body" id="calendar">
+
 					  	</div>
 					</div>
 
@@ -64,7 +62,7 @@
 							<a href="?controller=ScheduleCategory&action=list" class="btn btn-sm btn-secondary float-right">
 								<small><i class="fas fa-eye"></i> Ver todas</small>
 							</a>
-						</div>					  
+						</div>
 					  <div class="card-body">
 					    <div class="list-group">
 						  <a href="#" class="list-group-item list-group-item-action">
@@ -86,17 +84,16 @@
 						    </div>
 						  </a>
 						</div>
-					  </div>					  
+					  </div>
 					</div>
 				</div>
-					
+
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- Fim do conteúdo -->
-<?php include 'view/admin/partials/footer.php'?>
 
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {

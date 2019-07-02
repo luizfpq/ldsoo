@@ -30,9 +30,9 @@
                     <td><?php echo $volunteer->getUsername() ?></td>
                     <td><?php echo $volunteer->getEmail()?></td>
                     <td>
-                    <a href="index.php?controller=Volunteer&action=update&id=<?php echo $volunteer->getId() ?>">  [Editar] </a>
+                    <a href="index.php?controller=Volunteer&action=update&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm activities btn-primary"><i class="fas fa-pen" aria-hidden="true"></i> Editar</a>
 
-                    <a href="index.php?controller=Volunteer&action=delete&id=<?php echo $volunteer->getId() ?>">   [Excluir]  </a>
+                    <a href="index.php?controller=Volunteer&action=delete&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash" aria-hidden="true"></i> Remover</a>
 
 
                     </td>

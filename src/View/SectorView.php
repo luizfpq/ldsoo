@@ -1,26 +1,26 @@
 <?php
 
-class ScheduleView
+class SectorView
 {
 
-	const scheduleRoute = 'view/schedule/index.php';
+	const sectorRoute = 'view/sector/index.php';
 
-	const createRoute = 'view/schedule/create.php';
+	const createRoute = 'view/sector/create.php';
 
-  	const updateRoute = 'view/schedule/update.php';
+  	const updateRoute = 'view/sector/update.php';
 
-  	const deleteRoute = 'view/schedule/delete.php';
+  	const deleteRoute = 'view/sector/delete.php';
 
-  	const detailsRoute = 'view/schedule/details.php';
+  	const detailsRoute = 'view/sector/details.php';
 
 
-  	const listRoute = 'view/schedule/list.php';
+  	const listRoute = 'view/sector/list.php';
 
   	public function __construct(){}
 
-  	public function getScheduleRoute(){
+  	public function getSectorRoute(){
 
-    	return self::scheduleRoute;
+    	return self::sectorRoute;
   	}
 
   	public function getCreateRoute(){
