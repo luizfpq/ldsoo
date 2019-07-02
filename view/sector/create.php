@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 	$page_title = "Registrar novo evento";
 	$page_subject = "Eventos";
@@ -7,8 +6,6 @@
 <?php include 'view/admin/partials/head.php' ?>
 <?php include 'view/admin/partials/header.php'?>
 
-=======
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
@@ -33,10 +30,7 @@
 						      <option>Illuminati</option>
 						    </select>
 						</div>
-<<<<<<< HEAD
 						<hr>
-=======
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
 					</div>
 					<div class="card col">
 						<div class="card-header">
@@ -79,12 +73,9 @@
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
 <!-- Fim do conteúdo -->
 <?php include 'view/admin/partials/footer.php'?>
 
-=======
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
 	  var calendarEl = document.getElementById('calendar');
@@ -98,10 +89,6 @@
 	  calendar.setOption('locale', 'pt-br');
 	  calendar.render();
 	});
-<<<<<<< HEAD
 </script>
 
 </body>
-=======
-</script>
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf

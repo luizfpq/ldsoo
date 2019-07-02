@@ -140,9 +140,6 @@ class ScheduleController extends Controller
     $this->showView($viewModel);
 
 
-    $this->setRoute($this->view->getCreateRoute());
-
-    $this->showView();
 
 
 

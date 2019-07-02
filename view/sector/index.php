@@ -9,7 +9,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
-			<?php include 'view/admin/partials/sidebar.php' ?>
+			<?php include 'sidebar.php' ?>
 		</div>	
 <!-- Conteudo -->
 		<div class="content col-10">
@@ -21,7 +21,7 @@
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta nulla ut pharetra aliquam. Vivamus auctor vitae metus sed suscipit. Mauris lacinia, velit in iaculis finibus, lacus mi tempor leo, vitae hendrerit dolor ligula a urna.
 						</p>
-						<button class="btn btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</button>
+						<a href="?controller=Schedule&action=create" class="btn btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</a>
 					</div>
 					<div class="card col">
 						<div class="card-header">
@@ -29,7 +29,7 @@
 						</div>					  
 					  <div class="card-body">
 					    <div class="list-group">
-						  <a href="#" class="list-group-item list-group-item-action">
+						  <a href="?controller=Schedule&action=details&id=1" class="list-group-item list-group-item-action">
 						    <div class="d-flex w-100 justify-content-between">
 						      <h5 class="mb-1">Leilão beneficente</h5>
 						      <small>Em 3 dias</small>
@@ -49,23 +49,21 @@
 					<div class="card resume col col-md-8">
 						<div class="card-header">
 							<h5 class="card-title float-left"><i class="far fa-calendar"></i> Eventos no mês de Junho</h5>
-							<button class="btn btn-sm btn-secondary float-right">
+							<a href="?controller=Schedule&action=list" class="btn btn-sm btn-secondary float-right">
 								<small><i class="far fa-calendar-alt"></i> Todos eventos</small>
-							</button>
+							</a>
 						</div>
-						<a href="#">
-							<div class="card-body" id="calendar">					  	
-						  		
-						  	</div>
-					  	</a>
+						<div class="card-body" id="calendar">					  	
+					  		
+					  	</div>
 					</div>
 
 					<div class="card col">
 						<div class="card-header">
 							<h5 class="card-title float-left"><i class="fas fa-tags"></i> Categorias</h5>
-							<button class="btn btn-sm btn-secondary float-right">
+							<a href="?controller=ScheduleCategory&action=list" class="btn btn-sm btn-secondary float-right">
 								<small><i class="fas fa-eye"></i> Ver todas</small>
-							</button>
+							</a>
 						</div>					  
 					  <div class="card-body">
 					    <div class="list-group">
