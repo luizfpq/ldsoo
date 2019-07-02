@@ -5,11 +5,11 @@ class UserDao
   public function __construct(){}
 
   public function create($user)
-  { 
-    
+  {
+
     $db = Database::singleton();
 
-    $sql = "INSERT INTO _user (username,email, password) VALUES (?,?,?)";
+    $sql = "INSERT INTO volunteer (username,email, password) VALUES (?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -28,10 +28,10 @@ class UserDao
 
   public function getById($id)
   {
-    
+
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM _user WHERE id = ?";
+    $sql = "SELECT * FROM volunteer WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -55,8 +55,8 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "UPDATE _user SET username = ?, email =  ? WHERE id = ?";
-    
+    $sql = "UPDATE volunteer SET username = ?, email =  ? WHERE id = ?";
+
     $sth = $db->prepare($sql);
 
     $sth->bindValue(1, $user->getUsername(), PDO::PARAM_STR);
@@ -66,15 +66,15 @@ class UserDao
     $sth->bindValue(3, $user->getId(), PDO::PARAM_STR);
 
     $sth->execute();
-     
+
   }
 
   public function setLocale($user){
 
     $db = Database::singleton();
 
-    $sql = "UPDATE _user SET locale = ? WHERE id = ? ";
-    
+    $sql = "UPDATE volunteer SET locale = ? WHERE id = ? ";
+
     $sth = $db->prepare($sql);
 
     $sth->bindValue(1, $user->getLocale(), PDO::PARAM_STR);
@@ -82,14 +82,14 @@ class UserDao
     $sth->bindValue(2, $user->getId(), PDO::PARAM_STR);
 
     $sth->execute();
-     
+
   }
 
   public function delete($id){
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM _user WHERE id = ?";
+    $sql = "DELETE FROM volunteer WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -103,7 +103,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM  _user";
+    $sql = "SELECT * FROM  volunteer";
 
     $sth = $db->prepare($sql);
 
@@ -119,19 +119,19 @@ class UserDao
       $user->setId($obj->id);
 
       $users[] = $user;
-      
+
     }
 
     return $users;
   }
 
   public function setGroup($user)
-  { 
+  {
     $db = Database::singleton();
 
     foreach($user->getGroup() as $group)
     {
-      $sql = 'INSERT INTO user_group (_user,"group") VALUES (?,?)';
+      $sql = 'INSERT INTO user_group (volunteer,"group") VALUES (?,?)';
 
       $sth = $db->prepare($sql);
 

@@ -2,13 +2,13 @@
 
 class LogonDao
 {
-  
-  const _table = '_user';
+
+  const _table = 'volunteer';
 
   public function __construct(){}
 
   public function authenticate($logon)
-  {  
+  {
     $db = Database::singleton();
 
     $sql = 'SELECT * FROM ' . self::_table . ' WHERE email = ? AND password = ?';
