@@ -9,7 +9,7 @@
 	<div class="row">
 		<!--div class="col-md-2 sidebar bg-light">
 			<?php //include 'partials/sidebar.php' ?>
-		</div-->
+		
 <!-- Conteudo -->
 		<div class="content col-10 offset-md-1">
 			<div class="container-fluid">
