@@ -25,11 +25,11 @@ class Schedule
 
   public function getUser() { return $this->user; }
 
-  public function setUser($__user) { $this->user = $user; }
+  public function setUser($_user) { $this->user = $user; }
 
   public function getCreate() { return $this->create; }
 
-  public function setCreate($__create) { $this->create = $create; }
+  public function setCreate($_create) { $this->create = $create; }
 
   public function getUpdate() { return $this->update; }
 

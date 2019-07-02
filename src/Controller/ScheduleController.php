@@ -91,10 +91,10 @@ class ScheduleController extends Controller
     }
     else
     {
-         $schedulesCategoryDB = new schedulesCategoryDB();
+         $scheduleCategoryDB = new scheduleCategoryDB();
 
          $viewModel = array(
-            'categories' => $schedulesCategoryDB->getAll()
+            'categories' => $scheduleCategoryDB->getAll()
           );
 
          $this->setRoute($this->view->getCreateRoute());
@@ -107,43 +107,6 @@ class ScheduleController extends Controller
 
   }
 
-  public function deleteAction(){
-
-    $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
-
-    $scheduleDao = new ScheduleDao();
-
-    $viewModel = false;
-
-    if(isset($_REQUEST['submit']))
-    {
-
-      $this->setRoute($this->view->getListRoute());
-
-      $scheduleDao->delete($id);
-
-      $viewModel = array(
-          'schedules' => $scheduleDao->getAll()
-      );
-
-    }
-    else
-    {
-      $this->setRoute($this->view->getDeleteRoute());
-
-      $viewModel = array(
-          'schedules' => $scheduleDao->getById($id)
-      );
-
-    }
-
-    $this->showView($viewModel);
-
-
-
-
-
-  }
 
   public function listAction(){
 
@@ -165,7 +128,6 @@ class ScheduleController extends Controller
 
     $this->showView($viewModel);
 
-
   }
 
   public function deleteAction(){
@@ -193,7 +155,7 @@ class ScheduleController extends Controller
       $this->setRoute($this->view->getDeleteRoute());
 
       $viewModel = array(
-          'schedules' => $scheduleDao->getById($id)
+          'schedule' => $scheduleDao->getById($id)
       );
 
     }
@@ -229,8 +191,8 @@ class ScheduleController extends Controller
       $schedule->setDate($date);
       $schedule->setCategory($category);
       $schedule->setUser($_user);
-      $schedule->setCreate($create);
-      $schedule->setUpdate($update);
+      $schedule->setCreate($_create);
+      $schedule->setUpdate($_update);
       $schedule->setOrder($order);
       $schedule->setDescription($description);
 
