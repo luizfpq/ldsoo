@@ -156,3 +156,10 @@ footer .row{
 footer .row p{
 	text-align: center;
 }
+
+.datepicker-here{
+	margin: 0 auto;
+}
+.datepicker{
+	border:none;
+}
