@@ -19,27 +19,25 @@ class ScheduleController extends Controller
 
   }
 
-  public function createAction(){
-
-    $message = Message::singleton();
+ public function createAction(){
 
     $viewModel = false;
 
     if(isset($_REQUEST['submit']))
     {
-      $date = isset($_POST['date']) ? $_POST['date'] : null;
+      $date = isset($_POST['date']) ? $_POST['date'] : "";
 
-      $category = isset($_POST['category']) ? $_POST['category'] : null;
+      $category = isset($_POST['category']) ? $_POST['category'] : "";
 
-      $_schedule = isset($_POST['_user']) ? $_POST['_user'] : null;
+      $_schedule = isset($_POST['_user']) ? $_POST['_user'] : "";
 
-      $_create = isset($_POST['_create']) ? $_POST['_create'] : null;
+      $_create = isset($_POST['_create']) ? $_POST['_create'] : "";
 
-      $_update = isset($_POST['_update']) ? $_POST['_update'] : null;
+      $_update = isset($_POST['_update']) ? $_POST['_update'] : "";
 
-      $_order = isset($_POST['_order']) ? $_POST['_order'] : null;
+      $_order = isset($_POST['_order']) ? $_POST['_order'] : "";
 
-      $description = isset($_POST['description']) ? $_POST['description'] : null;
+      $description = isset($_POST['description']) ? $_POST['description'] : "";
 
       try
       {
@@ -54,12 +52,6 @@ class ScheduleController extends Controller
           if(sizeof($warnings))
             throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
 
-
-
-          /*$schedule = ScheduleFactory::factory($identifcationNumber, $type);
-
-          $message->addMessage('O usuário instanciado é do tipo: '. get_class($schedule) );
-          */
           $schedule = new Schedule();
 
           $scheduleDao = new scheduleDao();
@@ -72,15 +64,15 @@ class ScheduleController extends Controller
           $schedule->setOrder($order);
           $schedule->setDescription($description);
 
-          $scheduleId = $scheduleDao->create($schedule);
+          var_dump($schedule);
 
-          $schedule->setId($scheduleId);
+          $scheduleId = $scheduleDao->create($schedule);
 
            $this->setRoute($this->view->getListRoute());
 
-           $viewModel = array(
+           /*$viewModel = array(
              'schedules' => $scheduleDao->getAll()
-           );
+           );*/
 
            $message->addMessage('Evento adicionado com sucesso.');
       }
@@ -91,12 +83,13 @@ class ScheduleController extends Controller
     }
     else
     {
+         /*
          $schedulesCategoryDB = new schedulesCategoryDB();
-
+         
          $viewModel = array(
             'categories' => $schedulesCategoryDB->getAll()
-          );
-
+          );*/
+          
          $this->setRoute($this->view->getCreateRoute());
 
     }
@@ -107,6 +100,41 @@ class ScheduleController extends Controller
 
   }
 
+  public function listAction(){
+
+    $this->setRoute($this->view->getListRoute());
+
+    $this->showView();
+
+  }
+
+    public function deleteAction(){
+
+    $this->setRoute($this->view->getDeleteRoute());
+
+    $this->showView();
+
+  }
+
+  public function detailsAction(){
+
+    $this->setRoute($this->view->getDetailsRoute());
+
+    $this->showView();
+
+  }
+
+  public function updateAction(){
+
+    $this->setRoute($this->view->getUpdateRoute());
+
+    $this->showView();
+
+  }
+}
+
+/*
+ 
   public function deleteAction(){
 
     $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
@@ -138,10 +166,6 @@ class ScheduleController extends Controller
     }
 
     $this->showView($viewModel);
-
-
-
-
 
   }
 

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<?php
-	$page_title = "Registrar novo evento";
-	$page_subject = "Eventos";
- ?>
-
-<?php include 'view/admin/partials/head.php' ?>
-<?php include 'view/admin/partials/header.php'?>
-
-=======
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
@@ -16,27 +5,23 @@
 		</div>	
 <!-- Conteudo -->
 		<div class="content col-10">
-			<form class="container-fluid">
+			<form class="container-fluid" method="POST" action="?controller=Schedule&action=create">
 				<div class="row">
 					<div class="col-md-8">
 						<h1><i class="far fa-calendar-plus"></i> Novo evento</h1>
 						<hr>
 						<div class="form-group">
 						    <label for="description">Descrição do evento</label>
-						    <input type="text" class="form-control" id="description" placeholder="Fale um pouco sobre o evento">
+						    <input type="text" name="description" class="form-control" id="description" placeholder="Fale um pouco sobre o evento">
 					  	</div>
 					  	<div class="form-group">
 						    <label for="schedule_category">Selecione a categoria</label>
-						    <select class="form-control" id="schedule_category">
-						      <option>Leilão</option>
-						      <option>Rotaract</option>
-						      <option>Illuminati</option>
+						    <select name="schedule_category" class="form-control" id="schedule_category">
+						      <option value="1">Leilão</option>
+						      <option value="2">Rotaract</option>
+						      <option value="3">Illuminati</option>
 						    </select>
 						</div>
-<<<<<<< HEAD
-						<hr>
-=======
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
 					</div>
 					<div class="card col">
 						<div class="card-header">
@@ -51,27 +36,27 @@
 					<div class="col-md">						
 						<div class="form-group">
 						    <label for="schedule_activities">Selecione as atividades</label>
-						    <select multiple class="form-control" id="schedule_activities">
-						      <option>Leilão</option>
-						      <option>Rotaract</option>
-						      <option>Illuminati</option>
+						    <select name="schedule_activities" multiple class="form-control" id="schedule_activities">
+						      <option value="1">Leilão</option>
+						      <option value="2">Rotaract</option>
+						      <option value="3">Illuminati</option>
 						    </select>
 						</div>
 					</div>
 					
 					<div class="col-md">
 						<div class="form-group">
-						    <label for="schedule_category">Selecione os voluntários</label>
-						    <select multiple class="form-control" id="schedule_volunteers">
-						      <option>Quirino</option>
-						      <option>Zé</option>
-						      <option>Padoca</option>
-						      <option>Fidelis</option>
+						    <label for="schedule_volunteers">Selecione os voluntários</label>
+						    <select name="schedule_volunteers" multiple class="form-control" id="schedule_volunteers">
+						      <option value="1">Quirino</option>
+						      <option value="2">Zé</option>
+						      <option value="3">Padoca</option>
+						      <option value="4">Fidelis</option>
 						    </select>
 						</div>
 					</div>
 				</div>
-
+				<input type="hidden" name="submit" value="true">
 				<div class="row">
 					<button type="submit" class="col btn btn-lg btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</button>
 				</div>
@@ -79,29 +64,3 @@
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
-<!-- Fim do conteúdo -->
-<?php include 'view/admin/partials/footer.php'?>
-
-=======
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
-<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() {
-	  var calendarEl = document.getElementById('calendar');
-
-	  var calendar = new FullCalendar.Calendar(calendarEl, {
-	    plugins: [ 'dayGrid' ],
-	    timeZone: 'UTC',
-	    defaultView: 'dayGridMonth',
-	    events: 'https://fullcalendar.io/demo-events.json'
-	  });
-	  calendar.setOption('locale', 'pt-br');
-	  calendar.render();
-	});
-<<<<<<< HEAD
-</script>
-
-</body>
-=======
-</script>
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
