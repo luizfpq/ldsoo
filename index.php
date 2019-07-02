@@ -3,7 +3,7 @@
 session_start();
 
 //unset($_SESSION);
-
+//o zé é doidera
 define('BASE_PATH', __DIR__);
 
 try
