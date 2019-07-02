@@ -10,7 +10,7 @@
 					<div class="col">
 						<h1><i class="fas fa-hands-helping"></i> Listagem de usuários</h1>
 
-            <table class="table table-stripped table-hover table-condensed">
+            <table class="table table-hover table-condensed">
               <thead>
                 <tr>
                   <th scope="col"></th>
