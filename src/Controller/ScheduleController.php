@@ -43,9 +43,17 @@ class ScheduleController extends Controller
 
   }
 
+  public function detailsAction(){
+
+    $this->setRoute($this->view->getDetailsRoute());
+
+    $this->showView();
+
+  }
+
   public function updateAction(){
 
-    $this->setRoute($this->view->getUpateRoute());
+    $this->setRoute($this->view->getUpdateRoute());
 
     $this->showView();
 

@@ -1,11 +1,3 @@
-<?php
-	$page_title = "Gerenciar eventos e escalas";
-	$page_subject = "Eventos";
- ?>
-
-<?php include 'view/admin/partials/head.php' ?>
-<?php include 'view/admin/partials/header.php'?>
-
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
@@ -45,13 +37,9 @@
 				</div>
 				
 				<div class="row">
-
 					<div class="card resume col col-md-8">
 						<div class="card-header">
-							<h5 class="card-title float-left"><i class="far fa-calendar"></i> Eventos no mês de Junho</h5>
-							<a href="?controller=Schedule&action=list" class="btn btn-sm btn-secondary float-right">
-								<small><i class="far fa-calendar-alt"></i> Todos eventos</small>
-							</a>
+							<h5 class="card-title float-left"><i class="far fa-calendar"></i> Eventos agendados</h5>
 						</div>
 						<div class="card-body" id="calendar">					  	
 					  		
@@ -95,9 +83,6 @@
 		</div>
 	</div>
 </div>
-<!-- Fim do conteúdo -->
-<?php include 'view/admin/partials/footer.php'?>
-
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
 	  var calendarEl = document.getElementById('calendar');
@@ -112,5 +97,3 @@
 	  calendar.render();
 	});
 </script>
-
-</body>

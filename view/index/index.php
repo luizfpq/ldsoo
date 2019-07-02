@@ -100,6 +100,3 @@
 		</div>
 	</div>
 </div>
-<!-- Fim do conteúdo -->
-<?php include 'partials/footer.php'?>
-</body>
