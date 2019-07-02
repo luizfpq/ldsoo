@@ -1,178 +1,77 @@
-<?php
-	$page_title = "Gerenciar eventos e escalas";
-	$page_subject = "Eventos";
- ?>
-
-<?php include 'view/admin/partials/head.php' ?>
-<?php include 'view/admin/partials/header.php'?>
-
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
 			<?php include 'sidebar.php' ?>
-<<<<<<< HEAD
-		</div>
-=======
 		</div>	
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
 <!-- Conteudo -->
 		<div class="content col-10">
 			<div class="container-fluid">
+				<div class="row mb-0">
+					<div class="col">
+						<h1 class="float-left"><i class="fas fa-tasks"></i> Atividades</h1>
+						<a href="?controller=Activity&action=create" class="float-right btn btn-primary activities" style="border:none"><i class="fas fa-plus"></i> Nova atividade</a>
+					</div>					
+				</div>
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-calendar-check"></i> Eventos</h1>
 						<hr>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta nulla ut pharetra aliquam. Vivamus auctor vitae metus sed suscipit. Mauris lacinia, velit in iaculis finibus, lacus mi tempor leo, vitae hendrerit dolor ligula a urna.
 						</p>
-<<<<<<< HEAD
-						<a href="?controller=Activity&action=create" class="btn btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</a>
-					</div>
-					<div class="card col">
-						<div class="card-header">
-							<h5 class="card-title float-left"><i class="fas fa-fire-alt"></i> Próximo evento</h5>
-=======
-						<a href="?controller=Schedule&action=create" class="btn btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</a>
-					</div>
-					<div class="card col">
-						<div class="card-header">
-							<h5 class="card-title float-left"><i class="fas fa-fire-alt"></i> Próximo evento</h5>							
-						</div>					  
-					  <div class="card-body">
-					    <div class="list-group">
-						  <a href="?controller=Schedule&action=details&id=1" class="list-group-item list-group-item-action">
-						    <div class="d-flex w-100 justify-content-between">
-						      <h5 class="mb-1">Leilão beneficente</h5>
-						      <small>Em 3 dias</small>
-						    </div>
-						    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Mauris lacinia, velit in iaculis finibus, lacus mi tempor leo, vitae hendrerit dolor ligula a urna.</p>
-						  </a>						  
-						</div>
-					  </div>
-					  <div class="card-footer">
-					  	<span><i class="fas fa-tags"></i> Leilão, Rotaract, Illuminati</span>
-					  </div>
 					</div>
 				</div>
 				
 				<div class="row">
+					<div class="card resume col">
+						
+						<table class="table">
+						  <thead>
+						    <tr>
+						      <th scope="col">Nome</th>
+						      <th scope="col">Descrição</th>
+						      <th scope="col">Setor</th>
+						      <th scope="col">Ações</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">Palestra</th>
+						      <td>Lorem ipsum dolor sit amet. </td>
+						      <td>Diretoria</td>
+						      <td>
+					      			<a href="?controller=Activity&action=update" class="btn btn-sm activities btn-primary"><i class="fas fa-pen"></i> Editar</a>
+									<a href="?controller=Activity&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+								</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Leilão</th>
+						      <td>Lorem ipsum dolor sit amet.</td>
+						      <td>Concelho fiscal</td>
+						      <td>
+						      		<a href="?controller=Activity&action=update" class="btn activities btn-sm btn-primary"><i class="fas fa-pen"></i> Editar</a>
+									<a href="?controller=Activity&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+						      </td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Aula aberta</th>
+						      <td>Lorem ipsum dolor sit amet.</td>
+						      <td>Colaboradores</td>
+						      <td>
+						      	<a href="?controller=Activity&action=update" class="btn btn-sm activities btn-primary"><i class="fas fa-pen"></i> Editar</a>
+								<a href="?controller=Activity&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+						      </td>
+						    </tr>
+						  </tbody>
+						</table>
 
-					<div class="card resume col col-md-8">
-						<div class="card-header">
-							<h5 class="card-title float-left"><i class="far fa-calendar"></i> Eventos no mês de Junho</h5>
-							<a href="?controller=Schedule&action=list" class="btn btn-sm btn-secondary float-right">
-								<small><i class="far fa-calendar-alt"></i> Todos eventos</small>
-							</a>
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
-						</div>
-						<div class="card-body" id="calendar">					  	
-					  		
-					  	</div>
-					</div>
-
-					<div class="card col">
-						<div class="card-header">
-							<h5 class="card-title float-left"><i class="fas fa-tags"></i> Categorias</h5>
-							<a href="?controller=ScheduleCategory&action=list" class="btn btn-sm btn-secondary float-right">
-								<small><i class="fas fa-eye"></i> Ver todas</small>
-							</a>
-						</div>					  
-					  <div class="card-body">
-					    <div class="list-group">
-<<<<<<< HEAD
-						  <a href="?controller=Activity&action=details&id=1" class="list-group-item list-group-item-action">
-=======
-						  <a href="#" class="list-group-item list-group-item-action">
-						    <div class="d-flex w-100 justify-content-between">
-						      <h5 class="mb-1">Leilão</h5>
-						      <small>2 evento(s)</small>
-						    </div>
-						  </a>
-						  <a href="#" class="list-group-item list-group-item-action">
-						    <div class="d-flex w-100 justify-content-between">
-						      <h5 class="mb-1">Rotaract</h5>
-						      <small>1 evento(s)</small>
-						    </div>
-						  </a>
-						  <a href="#" class="list-group-item list-group-item-action">
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
-						    <div class="d-flex w-100 justify-content-between">
-						      <h5 class="mb-1">Illuminati</h5>
-						      <small>7 evento(s)</small>
-						    </div>
-<<<<<<< HEAD
-						    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Mauris lacinia, velit in iaculis finibus, lacus mi tempor leo, vitae hendrerit dolor ligula a urna.</p>
-						  </a>
-						</div>
-					  </div>
-					  <div class="card-footer">
-					  	<span><i class="fas fa-tags"></i> Leilão, Rotaract, Illuminati</span>
-					  </div>
-					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="card resume col col-md-8">
-						<div class="card-header">
-							<h5 class="card-title float-left"><i class="far fa-calendar"></i> Eventos no mês de Junho</h5>
-							<a href="?controller=Activity&action=list" class="btn btn-sm btn-secondary float-right">
-								<small><i class="far fa-calendar-alt"></i> Todos eventos</small>
-							</a>
-						</div>
-						<div class="card-body" id="calendar">
-
-					  	</div>
-					</div>
-
-					<div class="card col">
-						<div class="card-header">
-							<h5 class="card-title float-left"><i class="fas fa-tags"></i> Categorias</h5>
-							<a href="?controller=ActivityCategory&action=list" class="btn btn-sm btn-secondary float-right">
-								<small><i class="fas fa-eye"></i> Ver todas</small>
-							</a>
-						</div>
-					  <div class="card-body">
-					    <div class="list-group">
-						  <a href="#" class="list-group-item list-group-item-action">
-						    <div class="d-flex w-100 justify-content-between">
-						      <h5 class="mb-1">Leilão</h5>
-						      <small>2 evento(s)</small>
-						    </div>
-						  </a>
-						  <a href="#" class="list-group-item list-group-item-action">
-						    <div class="d-flex w-100 justify-content-between">
-						      <h5 class="mb-1">Rotaract</h5>
-						      <small>1 evento(s)</small>
-						    </div>
-						  </a>
-						  <a href="#" class="list-group-item list-group-item-action">
-						    <div class="d-flex w-100 justify-content-between">
-						      <h5 class="mb-1">Illuminati</h5>
-						      <small>7 evento(s)</small>
-						    </div>
-						  </a>
-						</div>
-					  </div>
-					</div>
-				</div>
-
-=======
-						  </a>
-						</div>
-					  </div>					  
 					</div>
 				</div>
 					
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- Fim do conteúdo -->
-<?php include 'view/admin/partials/footer.php'?>
-
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
 	  var calendarEl = document.getElementById('calendar');
@@ -187,9 +86,3 @@
 	  calendar.render();
 	});
 </script>
-
-<<<<<<< HEAD
-</body>
-=======
-</body>
->>>>>>> 10e4f6e96e5edb8767d1ee463a5bf1b136cf1bdf

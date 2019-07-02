@@ -45,7 +45,7 @@ class ActivityController extends Controller
 
   public function updateAction(){
 
-    $this->setRoute($this->view->getUpateRoute());
+    $this->setRoute($this->view->getUpdateRoute());
 
     $this->showView();
 
