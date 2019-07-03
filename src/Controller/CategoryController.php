@@ -1,6 +1,6 @@
 <?php
 
-class SectorController extends Controller
+class CategoryController extends Controller
 {
   private $view;
 
@@ -8,12 +8,12 @@ class SectorController extends Controller
 
   public function __construct(){
 
-    $this->view = new SectorView();
+    $this->view = new CategoryView();
   }
 
-  public function SectorAction(){
+  public function categoryAction(){
 
-    $this->setRoute($this->view->getSectorRoute());
+    $this->setRoute($this->view->getCategoryRoute());
 
     $this->showView();
 
@@ -45,7 +45,7 @@ class SectorController extends Controller
 
   public function updateAction(){
 
-    $this->setRoute($this->view->getUpdateRoute());
+    $this->setRoute($this->view->getUpateRoute());
 
     $this->showView();
 

@@ -8,7 +8,7 @@
 			<form class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-plus"></i> Atualizar atividade</h1>
+						<h1><i class="fas fa-pen"></i> Atualizar atividade</h1>
 						<hr>
 					</div>
 				</div>

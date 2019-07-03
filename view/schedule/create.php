@@ -15,7 +15,7 @@
 		<div class="content col-10">
 			<form class="container-fluid">
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-7">
 						<h1><i class="far fa-calendar-plus"></i> Novo evento</h1>
 						<hr>
 						<div class="form-group">
@@ -30,6 +30,7 @@
 						      <option>Illuminati</option>
 						    </select>
 						</div>
+					</div>
 
 						<hr>
 					<div class="card col">

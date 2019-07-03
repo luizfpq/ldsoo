@@ -49,7 +49,7 @@
 					<div class="card col">
 						<div class="card-header">
 							<h5 class="card-title float-left"><i class="fas fa-tags"></i> Categorias</h5>
-							<a href="?controller=ScheduleCategory&action=list" class="btn btn-sm btn-secondary float-right">
+							<a href="?controller=Category&action=category" class="btn btn-sm btn-secondary float-right">
 								<small><i class="fas fa-eye"></i> Ver todas</small>
 							</a>
 						</div>					  

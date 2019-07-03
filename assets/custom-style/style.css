@@ -143,9 +143,15 @@ input,button{
 }
 .sectors{
 	background: #0B3450;
+	border: none;
 }
 .volunteers{
 	background: #9CB307;
+	border: none;
+}
+
+.btn-danger{
+	border: none;
 }
 
 .resume a{

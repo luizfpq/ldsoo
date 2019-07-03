@@ -19,6 +19,14 @@ class ScheduleController extends Controller
 
   }
 
+  public function detailsAction(){
+
+    $this->setRoute($this->view->getDetailsRoute());
+
+    $this->showView();
+
+  }
+
   public function createAction(){
 
     $message = Message::singleton();
