@@ -11,10 +11,6 @@ class VolunteerDao
 
     $sql = "INSERT INTO volunteer (username,email, password, role) VALUES (?,?,?,?)";
 
-    echo '<script>';
-    echo 'console.log('. json_encode( $sql ) .')';
-    echo '</script>';
-
     $sth = $db->prepare($sql);
 
     $sth->bindValue(1, $volunteer->getUsername(), PDO::PARAM_STR);

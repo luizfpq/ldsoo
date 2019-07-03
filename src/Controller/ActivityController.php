@@ -147,7 +147,7 @@ class ActivityController extends Controller
 
     if(isset($_REQUEST['submit']))
     {
-      $this->setRoute($this->view->getListRoute());
+      $this->setRoute($this->view->getActivityRoute());
       $activityDao->delete($id);
       $viewModel = array(
           'activities' => $activityDao->getAll()
@@ -177,21 +177,22 @@ class ActivityController extends Controller
     {
 
       $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : '';
-
       $description = isset($_REQUEST['description']) ? $_REQUEST['description'] : '';
-
       $sector = isset($_REQUEST['sector']) ? $_REQUEST['sector'] : '';
 
 
+
       $activity = new Activity();
+      $activity->setSector($sector);
       $activity->setName($name);
       $activity->setDescription($description);
-      $activity->setSector($sector);
+      $activity->setId($id);
 
       $activityDao = new ActivityDao();
       $activityDao->update($activity);
 
       $this->setRoute($this->view->getActivityRoute());
+      $this->showView($viewModel);
 
       $viewModel = array(
         'activities' => $activityDao->getAll()
