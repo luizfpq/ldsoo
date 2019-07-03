@@ -20,32 +20,31 @@
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta nulla ut pharetra aliquam. Vivamus auctor vitae metus sed suscipit. Mauris lacinia, velit in iaculis finibus, lacus mi tempor leo, vitae hendrerit dolor ligula a urna.
 						</p>
-						<button class="btn btn-secondary"><i class="fas fa-plus"></i> Saiba mais</button>
 					</div>
 					<div class="card col">
 						<div class="card-header">
 							<h5 class="card-title float-left"><i class="fas fa-calendar-check"></i> Próximos eventos</h5>
-							<button class="btn btn-sm btn-secondary float-right">
+							<a href="?controller=Schedule&action=schedule" class="btn btn-sm btn-secondary float-right">
 								<small><i class="far fa-calendar-alt"></i> Todos eventos</small>
-							</button>
+							</a>
 						</div>
 					  <div class="card-body">
 					    <div class="list-group">
-						  <a href="#" class="list-group-item list-group-item-action">
+						  <a href="?controller=Schedule&action=details&id=1" class="list-group-item list-group-item-action">
 						    <div class="d-flex w-100 justify-content-between">
 						      <h5 class="mb-1">Leilão beneficente</h5>
 						      <small>Em 3 dias</small>
 						    </div>
 						    <p class="mb-1">Donec id elit non mi porta gravida at eget metus.</p>
 						  </a>
-						  <a href="#" class="list-group-item list-group-item-action">
+						  <a href="?controller=Schedule&action=details&id=2" class="list-group-item list-group-item-action">
 						    <div class="d-flex w-100 justify-content-between">
 						      <h5 class="mb-1">Leilão beneficente</h5>
 						      <small>Em 3 dias</small>
 						    </div>
 						    <p class="mb-1">Donec id elit non mi porta gravida at eget metus.</p>
 						  </a>
-						  <a href="#" class="list-group-item list-group-item-action">
+						  <a href="?controller=Schedule&action=details&id=3" class="list-group-item list-group-item-action">
 						    <div class="d-flex w-100 justify-content-between">
 						      <h5 class="mb-1">Leilão beneficente</h5>
 						      <small>Em 3 dias</small>
@@ -60,7 +59,7 @@
 				<div class="row">
 
 					<div class="card activities resume col">
-						<a href="#">
+						<a href="?controller=Activity&action=activity">
 							<img src="assets\img\activities.jpg" class="card-img-top" alt="...">
 						  	<div class="card-body">
 					  		<h6><i class="fas fa-tasks"></i> Atividades</h6>
@@ -72,7 +71,7 @@
 					</div>
 
 					<div class="card sectors resume col">
-						<a href="#">
+						<a href="?controller=Sector&action=sector">
 							<img src="assets\img\sectors.jpg" class="card-img-top" alt="...">
 						  	<div class="card-body">
 					  		<h6><i class="fas fa-chart-pie"></i> Setores</h6>
@@ -84,7 +83,7 @@
 					</div>
 
 					<div class="card volunteers resume col">
-						<a href="#">
+						<a href="?controller=Volunteer&action=volunteer">
 							<img src="assets\img\volunteers.jpg" class="card-img-top" alt="...">
 						  	<div class="card-body">
 					  		<h6><i class="fas fa-hands-helping"></i> Voluntários</h6>

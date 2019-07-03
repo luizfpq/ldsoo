@@ -8,8 +8,8 @@
 			<div class="container-fluid">
 				<div class="row mb-0">
 					<div class="col">
-						<h1 class="float-left"><i class="fas fa-chart-pie"></i> Setores</h1>
-						<a href="?controller=Sector&action=create" class="float-right btn btn-primary sectors" style="border:none"><i class="fas fa-plus"></i> Novo setor</a>
+						<h1 class="float-left"><i class="fas fa-tags"></i> categorias</h1>
+						<a href="?controller=Category&action=create" class="float-right btn btn-primary activities" style="border:none"><i class="fas fa-plus"></i> Nova categoria</a>
 					</div>					
 				</div>
 				<div class="row">
@@ -34,27 +34,27 @@
 						  </thead>
 						  <tbody>
 						    <tr>
-						      <th scope="row">Diretoria</th>
+						      <th scope="row">Palestra</th>
 						      <td>Lorem ipsum dolor sit amet. </td>
 						      <td>
-					      			<a href="?controller=Sector&action=update" class="btn btn-sm sectors btn-primary"><i class="fas fa-pen"></i> Editar</a>
-									<a href="?controller=Sector&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+					      			<a href="?controller=Category&action=update" class="btn btn-sm activities btn-primary"><i class="fas fa-pen"></i> Editar</a>
+									<a href="?controller=Category&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
 								</td>
 						    </tr>
 						    <tr>
-						      <th scope="row">Finanças</th>
+						      <th scope="row">Leilão</th>
 						      <td>Lorem ipsum dolor sit amet.</td>
 						      <td>
-						      		<a href="?controller=Sector&action=update" class="btn sectors btn-sm btn-primary"><i class="fas fa-pen"></i> Editar</a>
-									<a href="?controller=Sector&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+						      		<a href="?controller=Category&action=update" class="btn activities btn-sm btn-primary"><i class="fas fa-pen"></i> Editar</a>
+									<a href="?controller=Category&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
 						      </td>
 						    </tr>
 						    <tr>
-						      <th scope="row">Colaboradores</th>
+						      <th scope="row">Aula aberta</th>
 						      <td>Lorem ipsum dolor sit amet.</td>
 						      <td>
-						      	<a href="?controller=Sector&action=update" class="btn btn-sm sectors btn-primary"><i class="fas fa-pen"></i> Editar</a>
-								<a href="?controller=Sector&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+						      	<a href="?controller=Category&action=update" class="btn btn-sm activities btn-primary"><i class="fas fa-pen"></i> Editar</a>
+								<a href="?controller=Category&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
 						      </td>
 						    </tr>
 						  </tbody>
