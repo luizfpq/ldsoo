@@ -1,23 +1,22 @@
 <?php
 
-class Schedule
+class Activity
 {
   private $id;
-  private $date;
-  private $category;
+  private $name;
+  private $description;
   private $_user;//Criador ou organizador
   private $_create;//Data de criação
   private $_update;//Última alteração
-  private $_order;
-  private $description;
+  private $sector;
 
   public function setId($id){ $this->id = $id; }
 
   public function getId() { return $this->id; }
 
-  public function setDate($date) { $this->date = $date; }
+  public function setName($name) { $this->name = $name; }
 
-  public function getDate(){ return $this->date; }
+  public function getName(){ return $this->name; }
 
   public function setDescription($description) { $this->description = $description; }
 
@@ -35,13 +34,10 @@ class Schedule
 
   public function setUpdate($_update) { $this->update = $_update; }
 
-  public function getOrder() { return $this->order; }
+  public function getSector() { return $this->sector; }
 
-  public function setOrder($_order) { $this->order = $_order; }
+  public function setSector($sector) { $this->sector = $sector; }
 
-  public function getCategory() { return $this->order; }
-
-  public function setCategory($category) { $this->category = $category; }
 
   public function __construct() { }
 
