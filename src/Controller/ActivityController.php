@@ -60,7 +60,7 @@ class ActivityController extends Controller
           */
           $activity = new Activity();
 
-          $activityDao = new activityDao();
+          $activityDao = new ActivityDao();
 
           $activity->setName($date);
           $activity->setDescription($description);

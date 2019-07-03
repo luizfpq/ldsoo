@@ -62,7 +62,7 @@ class ScheduleController extends Controller
           */
           $schedule = new Schedule();
 
-          $scheduleDao = new scheduleDao();
+          $scheduleDao = new ScheduleDao();
 
           $schedule->setDate($date);
           $schedule->setCategory($category);
