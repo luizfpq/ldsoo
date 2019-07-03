@@ -27,7 +27,7 @@
 				  	<div class="col">
 						<div class="form-group">
 						    <label for="activity_sector">Selecione o setor</label>
-								<select class="form-control" id="activity_sector" name="sector">
+								<select class="form-control" id="sector" name="sector">
  								 <?php
 
  									 foreach($sectors as $sector) {
