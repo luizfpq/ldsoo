@@ -1,3 +1,8 @@
+<?php
+//	$activity =  $viewModel['activity'];
+	$sectorDao = new SectorDao();
+	$sectors = $sectorDao->getAll();
+?>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-2 sidebar">
@@ -22,11 +27,18 @@
 				  	<div class="col">
 						<div class="form-group">
 						    <label for="activity_sector">Selecione o setor</label>
-						    <select class="form-control" id="activity_sector">
-						      <option>Diretoria</option>
-						      <option>Concelho fiscal</option>
-						      <option>Colaboradores</option>
-						    </select>
+								<select class="form-control" id="activity_sector" name="sector">
+ 								 <?php
+
+ 									 foreach($sectors as $sector) {
+ 										 //verifica o setor e monta a view com a seleção correta
+ 										// $selected = ($sector->getId() == $activity->getSector()) ? 'selected' : null;
+ 										 //escreve a option no html
+ 										 echo "<option value='{$sector->getId()}'>{$sector->getName()}</option>";
+ 									 }
+ 								 ?>
+
+ 							 </select>
 						</div>
 					</div>
 				</div>
