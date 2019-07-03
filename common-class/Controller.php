@@ -42,4 +42,13 @@ class Controller
     }
   }
 
+/**
+ * Função de debug, @// TODO: se sobrar tempo passar montar um objeto proprio
+ */
+  public function consoleLog($string) {
+    echo '<script>';
+    echo 'console.log('. json_encode( 'src/Model/'. $string . '.php' ) .')';
+    echo '</script>';
+  }
+
 }

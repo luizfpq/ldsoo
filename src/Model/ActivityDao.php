@@ -5,12 +5,11 @@ class ActivityDao{
 
 	public function __construct(){}
 
-
     public function create($activity){
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO _activity (date,category,description, user, create, update, order) VALUES (?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO activity (name, description, _user, sector) VALUES (?,?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -20,11 +19,7 @@ class ActivityDao{
 
     $sth->bindValue(3, $activity->getUser(), PDO::PARAM_STR);
 
-    $sth->bindValue(4, $activity->getCreate(), PDO::PARAM_STR);
-
-    $sth->bindValue(5, $activity->getUpdate(), PDO::PARAM_STR);
-
-    $sth->bindValue(6, $activity->getSector(), PDO::PARAM_STR);
+    $sth->bindValue(4, $activity->getSector(), PDO::PARAM_STR);
 
 
 
@@ -40,7 +35,7 @@ class ActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM _activity WHERE id = ?";
+    $sql = "SELECT * FROM activity WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -50,10 +45,14 @@ class ActivityDao{
 
     if($obj = $sth->fetch(PDO::FETCH_OBJ))
     {
-      $activity = new activity();
+      $activity = new Activity();
 
       $activity->setName($obj->name);
-      $activity->setDescription($obj->description);
+			$activity->setDescription($obj->description);
+			$activity->setSector($obj->sector);
+
+
+			$activity->setId($obj->id);
 
       return $activity;
     }
@@ -63,21 +62,14 @@ class ActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "UPDATE _activity SET date = ?, description =  ? WHERE id = ?";
+    $sql = "UPDATE activity SET name = ?, description =  ?, sector = ? WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
 		$sth->bindValue(1, $activity->getName(), PDO::PARAM_STR);
-
     $sth->bindValue(2, $activity->getDescription(), PDO::PARAM_STR);
-
-    $sth->bindValue(3, $activity->getUser(), PDO::PARAM_STR);
-
-    $sth->bindValue(4, $activity->getCreate(), PDO::PARAM_STR);
-
-    $sth->bindValue(5, $activity->getUpdate(), PDO::PARAM_STR);
-
-    $sth->bindValue(6, $activity->getSector(), PDO::PARAM_STR);
+    $sth->bindValue(3, $activity->getSector(), PDO::PARAM_STR);
+		$sth->bindValue(4, $activity->getId(), PDO::PARAM_STR);
 
 
     $sth->execute();
@@ -89,7 +81,7 @@ class ActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM _activity WHERE id = ?";
+    $sql = "DELETE FROM activity WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -103,7 +95,7 @@ class ActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM  _activity";
+    $sql = "SELECT * FROM  activity";
 
     $sth = $db->prepare($sql);
 

@@ -5,9 +5,9 @@ class Activity
   private $id;
   private $name;
   private $description;
-  private $_user;//Criador ou organizador
-  private $_create;//Data de criação
-  private $_update;//Última alteração
+  private $user;//Criador ou organizador
+  private $create;//Data de criação
+  private $update;//Última alteração
   private $sector;
 
   public function setId($id){ $this->id = $id; }
@@ -24,15 +24,15 @@ class Activity
 
   public function getUser() { return $this->user; }
 
-  public function setUser($_user) { $this->user = $_user; }
+  public function setUser($user) { $this->user = $user; }
 
   public function getCreate() { return $this->create; }
 
-  public function setCreate($_create) { $this->create = $_create; }
+  public function setCreate($create) { $this->create = $create; }
 
   public function getUpdate() { return $this->update; }
 
-  public function setUpdate($_update) { $this->update = $_update; }
+  public function setUpdate($update) { $this->update = $update; }
 
   public function getSector() { return $this->sector; }
 

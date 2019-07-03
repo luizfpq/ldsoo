@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-2 sidebar">
 			<?php include 'sidebar.php' ?>
-		</div>	
+		</div>
 <!-- Conteudo -->
 		<div class="content col-10">
 			<div class="container-fluid">
@@ -10,7 +10,7 @@
 					<div class="col">
 						<h1 class="float-left"><i class="fas fa-chart-pie"></i> Setores</h1>
 						<a href="?controller=Sector&action=create" class="float-right btn btn-primary sectors" style="border:none"><i class="fas fa-plus"></i> Novo setor</a>
-					</div>					
+					</div>
 				</div>
 				<div class="row">
 					<div class="col">
@@ -20,10 +20,10 @@
 						</p>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="card resume col">
-						
+
 						<table class="table">
 						  <thead>
 						    <tr>
@@ -32,37 +32,36 @@
 						      <th scope="col">Ações</th>
 						    </tr>
 						  </thead>
-						  <tbody>
-						    <tr>
-						      <th scope="row">Diretoria</th>
-						      <td>Lorem ipsum dolor sit amet. </td>
-						      <td>
-					      			<a href="?controller=Sector&action=update" class="btn btn-sm sectors btn-primary"><i class="fas fa-pen"></i> Editar</a>
-									<a href="?controller=Sector&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
-								</td>
-						    </tr>
-						    <tr>
-						      <th scope="row">Finanças</th>
-						      <td>Lorem ipsum dolor sit amet.</td>
-						      <td>
-						      		<a href="?controller=Sector&action=update" class="btn sectors btn-sm btn-primary"><i class="fas fa-pen"></i> Editar</a>
-									<a href="?controller=Sector&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
-						      </td>
-						    </tr>
-						    <tr>
-						      <th scope="row">Colaboradores</th>
-						      <td>Lorem ipsum dolor sit amet.</td>
-						      <td>
-						      	<a href="?controller=Sector&action=update" class="btn btn-sm sectors btn-primary"><i class="fas fa-pen"></i> Editar</a>
-								<a href="?controller=Sector&action=delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
-						      </td>
-						    </tr>
-						  </tbody>
+							<tbody>
+								<?php
+
+									foreach($viewModel['sectors'] as $sector) :
+
+								?>
+
+									<tr>
+										<td><?php echo $sector->getName() ?></td>
+										<td><?php echo $sector->getDescription()?></td>
+										<td>
+										<a href="index.php?controller=Sector&action=update&id=<?php echo $sector->getId() ?>" class="btn btn-sm sectors btn-primary"><i class="fas fa-pen"></i> Editar</a>
+
+										<a href="index.php?controller=Sector&action=delete&id=<?php echo $sector->getId() ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+
+
+										</td>
+									</tr>
+
+								<?php
+
+								endforeach;
+
+								?>
+							</tbody>
 						</table>
 
 					</div>
 				</div>
-					
+
 				</div>
 			</div>
 		</div>

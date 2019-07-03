@@ -13,9 +13,28 @@ class ActivityController extends Controller
 
   public function activityAction(){
 
+    $message = Message::singleton();
+
+    //$message->addMessage('Listando atividades.');
+
+    //$message->save();
+
     $this->setRoute($this->view->getActivityRoute());
 
-    $this->showView();
+    $activityDao = new ActivityDao();
+
+    $activities = $activityDao->getAll();
+
+    $viewModel = array(
+        'activities' => $activities,
+    );
+
+
+    $this->showView($viewModel);
+
+    // $this->setRoute($this->view->getListRoute());
+    //
+    // $this->showView();
 
   }
 
@@ -31,11 +50,7 @@ class ActivityController extends Controller
 
       $description = isset($_POST['description']) ? $_POST['description'] : null;
 
-      $_user = isset($_POST['_user']) ? $_POST['_user'] : null;
-
-      $_create = isset($_POST['_create']) ? $_POST['_create'] : null;
-
-      $_update = isset($_POST['_update']) ? $_POST['_update'] : null;
+      $user = isset($_POST['user']) ? $_POST['user'] : null;
 
       $sector = isset($_POST['sector']) ? $_POST['sector'] : null;
 
@@ -62,11 +77,9 @@ class ActivityController extends Controller
 
           $activityDao = new ActivityDao();
 
-          $activity->setName($date);
+          $activity->setName($name);
           $activity->setDescription($description);
-          $activity->setUser($_user);
-          $activity->setCreate($_create);
-          $activity->setUpdate($_update);
+          $activity->setUser($user);
           $activity->setSector($sector);
 
 
@@ -87,7 +100,7 @@ class ActivityController extends Controller
         $message->addWarning($e->getMessage());
       }
     }
-
+    $this->setRoute($this->view->getCreateRoute());
     $this->showView($viewModel);
 
     $message->save();
@@ -134,11 +147,8 @@ class ActivityController extends Controller
 
     if(isset($_REQUEST['submit']))
     {
-
       $this->setRoute($this->view->getListRoute());
-
       $activityDao->delete($id);
-
       $viewModel = array(
           'activities' => $activityDao->getAll()
       );
@@ -156,16 +166,11 @@ class ActivityController extends Controller
 
     $this->showView($viewModel);
 
-    // $this->setRoute($this->view->getDeleteRoute());
-    //
-    // $this->showView();
-
   }
 
   public function updateAction(){
 
     $viewModel = false;
-
     $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 
     if(isset($_REQUEST['submit']))
@@ -175,39 +180,32 @@ class ActivityController extends Controller
 
       $description = isset($_REQUEST['description']) ? $_REQUEST['description'] : '';
 
-      $_activity = isset($_REQUEST['_user']) ? $_REQUEST['_user'] : '';
-
-      $_create = isset($_REQUEST['_create']) ? $_REQUEST['_create'] : '';
-
-      $_update = isset($_REQUEST['_update']) ? $_REQUEST['_update'] : '';
-
       $sector = isset($_REQUEST['sector']) ? $_REQUEST['sector'] : '';
 
 
       $activity = new Activity();
       $activity->setName($name);
       $activity->setDescription($description);
-      $activity->setUser($_user);
-      $activity->setCreate($_create);
-      $activity->setUpdate($_update);
       $activity->setSector($sector);
 
       $activityDao = new ActivityDao();
       $activityDao->update($activity);
 
-      $this->setRoute($this->view->getListRoute());
+      $this->setRoute($this->view->getActivityRoute());
 
       $viewModel = array(
         'activities' => $activityDao->getAll()
+      );
+      $sectorDao = new SectorDao();
+      $viewModel = array(
+        'sectors' => $sectorDao->getAll()
       );
 
     }
     else
     {
       $this->setRoute($this->view->getUpdateRoute());
-
       $activityDao = new ActivityDao();
-
       $viewModel = array(
           'activity' => $activityDao->getById($id)
       );

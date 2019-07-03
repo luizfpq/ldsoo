@@ -40,17 +40,3 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() {
-	  var calendarEl = document.getElementById('calendar');
-
-	  var calendar = new FullCalendar.Calendar(calendarEl, {
-	    plugins: [ 'dayGrid' ],
-	    timeZone: 'UTC',
-	    defaultView: 'dayGridMonth',
-	    events: 'https://fullcalendar.io/demo-events.json'
-	  });
-	  calendar.setOption('locale', 'pt-br');
-	  calendar.render();
-	});
-</script>

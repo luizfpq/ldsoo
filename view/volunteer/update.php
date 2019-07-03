@@ -1,4 +1,4 @@
-<?php $volunteer =  $viewModel['volunteer'] ?>
+<?php $volunteer =  $viewModel['volunteer']; ?>
 
 <div class="container-fluid">
 	<div class="row">
