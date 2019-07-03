@@ -63,11 +63,7 @@ class ActivityDao{
     $db = Database::singleton();
 
     $sql = "UPDATE activity SET name = ?, description = ?, sector = ? WHERE id = ?";
-<<<<<<< HEAD
 		//$activity->consoleLog($sql);
-=======
-
->>>>>>> 6969b0ef5da6f259d74f6795600558d452deef49
     $sth = $db->prepare($sql);
 
 		$sth->bindValue(1, $activity->getName(), PDO::PARAM_STR);

@@ -27,11 +27,10 @@
 				  	<div class="col">
 						<div class="form-group">
 						    <label for="activity_sector">Selecione o setor</label>
-<<<<<<< HEAD
 								<select class="form-control" id="activity_sector" name="sector">
-=======
+
 								<select class="form-control" id="sector" name="sector">
->>>>>>> 6969b0ef5da6f259d74f6795600558d452deef49
+
  								 <?php
 
  									 foreach($sectors as $sector) {
