@@ -1,13 +1,13 @@
 <?php
 
-class VolunteerActivityDB{
+class VolunteerActivityDao{
 
-	
+
 	public function __construct(){}
-	
 
-    public function create($volunteerActivity){ 
-    
+
+    public function create($volunteerActivity){
+
     $db = Database::singleton();
 
     $sql = "INSERT INTO _volunteerActivity (user,activity, time, sector, id, create, volunteer, schedule) VALUES (?,?,?,?,?,?,?,?)";
@@ -20,7 +20,7 @@ class VolunteerActivityDB{
 
     $sth->bindValue(3, $volunteerActivity->getTime(), PDO::PARAM_STR);
 
-    $sth->bindValue(4, $volunteerActivity->getSector(), PDO::PARAM_STR);    
+    $sth->bindValue(4, $volunteerActivity->getSector(), PDO::PARAM_STR);
 
     $sth->bindValue(5, $volunteerActivity->getId(), PDO::PARAM_STR);
 
@@ -30,8 +30,8 @@ class VolunteerActivityDB{
 
     $sth->bindValue(8, $volunteerActivity->getSchedule(), PDO::PARAM_STR);
 
-    
-    
+
+
     if($sth->execute())
       return $db->lastInsertId();;
 
@@ -41,7 +41,7 @@ class VolunteerActivityDB{
 
   public function getById($id)
   {
-    
+
     $db = Database::singleton();
 
     $sql = "SELECT * FROM _volunteerActivity WHERE id = ?";
@@ -68,7 +68,7 @@ class VolunteerActivityDB{
     $db = Database::singleton();
 
     $sql = "UPDATE _volunteerActivity SET user = ?, activity =  ? WHERE id = ?";
-    
+
     $sth = $db->prepare($sql);
 
     $sth->bindValue(1, $volunteerActivity->getUser(), PDO::PARAM_STR);
@@ -77,7 +77,7 @@ class VolunteerActivityDB{
 
     $sth->bindValue(3, $volunteerActivity->getTime(), PDO::PARAM_STR);
 
-    $sth->bindValue(4, $volunteerActivity->getSector(), PDO::PARAM_STR);    
+    $sth->bindValue(4, $volunteerActivity->getSector(), PDO::PARAM_STR);
 
     $sth->bindValue(5, $volunteerActivity->getId(), PDO::PARAM_STR);
 
@@ -89,7 +89,7 @@ class VolunteerActivityDB{
 
 
     $sth->execute();
-     
+
   }
 
 
@@ -127,7 +127,7 @@ class VolunteerActivityDB{
       $volunteerActivity->setId($obj->id);
 
       $volunteerActivities[] = $volunteerActivity;
-      
+
     }
 
     return $volunteerActivities;

@@ -1,6 +1,6 @@
 <?php
 
-class ScheduleDB{
+class ScheduleDao{
 
 
 	public function __construct(){}
@@ -10,7 +10,7 @@ class ScheduleDB{
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO _schedule (date,category,description, user, create, update, order) VALUES (?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO schedule (date, category, description, _user) VALUES (?,?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -21,14 +21,6 @@ class ScheduleDB{
     $sth->bindValue(3, $schedule->getDescription(), PDO::PARAM_STR);
 
     $sth->bindValue(4, $schedule->getUser(), PDO::PARAM_STR);
-
-    $sth->bindValue(5, $schedule->getCreate(), PDO::PARAM_STR);
-
-    $sth->bindValue(6, $schedule->getUpdate(), PDO::PARAM_STR);
-
-    $sth->bindValue(7, $schedule->getOrder(), PDO::PARAM_STR);
-
-
 
     if($sth->execute())
       return $db->lastInsertId();;
@@ -42,7 +34,7 @@ class ScheduleDB{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM _schedule WHERE id = ?";
+    $sql = "SELECT * FROM schedule WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -65,7 +57,7 @@ class ScheduleDB{
 
     $db = Database::singleton();
 
-    $sql = "UPDATE _schedule SET date = ?, description =  ? WHERE id = ?";
+    $sql = "UPDATE schedule SET date = ?, description =  ? WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -93,7 +85,7 @@ class ScheduleDB{
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM _schedule WHERE id = ?";
+    $sql = "DELETE FROM schedule WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -107,7 +99,7 @@ class ScheduleDB{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM  _schedule";
+    $sql = "SELECT * FROM  schedule";
 
     $sth = $db->prepare($sql);
 
@@ -126,7 +118,7 @@ class ScheduleDB{
 
     }
 
-    return $schedulesCategory;
+    return $schedules;
   }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-class ScheduleCategoryDB{
+class ScheduleCategoryDao{
 
 
 	public function __construct(){}

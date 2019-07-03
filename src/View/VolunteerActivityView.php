@@ -1,6 +1,6 @@
 <?php
 
-class ScheduleView
+class VolunteActivityView
 {
 
 	const scheduleRoute = 'view/schedule/index.php';
