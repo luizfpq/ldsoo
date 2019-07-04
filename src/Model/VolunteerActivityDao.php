@@ -10,7 +10,7 @@ class VolunteerActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO _volunteerActivity (user,activity, time, sector, id, create, volunteer, schedule) VALUES (?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO volunteer_activity (_user, activity, time, sector, volunteer, schedule) VALUES (?,?,?,?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -22,13 +22,9 @@ class VolunteerActivityDao{
 
     $sth->bindValue(4, $volunteerActivity->getSector(), PDO::PARAM_STR);
 
-    $sth->bindValue(5, $volunteerActivity->getId(), PDO::PARAM_STR);
+    $sth->bindValue(5, $volunteerActivity->getVolunteer(), PDO::PARAM_STR);
 
-    $sth->bindValue(6, $volunteerActivity->getCreate(), PDO::PARAM_STR);
-
-    $sth->bindValue(7, $volunteerActivity->getVolunteer(), PDO::PARAM_STR);
-
-    $sth->bindValue(8, $volunteerActivity->getSchedule(), PDO::PARAM_STR);
+    $sth->bindValue(6, $volunteerActivity->getSchedule(), PDO::PARAM_STR);
 
 
 
@@ -44,7 +40,7 @@ class VolunteerActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM _volunteerActivity WHERE id = ?";
+    $sql = "SELECT * FROM volunteer_activity WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -67,7 +63,7 @@ class VolunteerActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "UPDATE _volunteerActivity SET user = ?, activity =  ? WHERE id = ?";
+    $sql = "UPDATE volunteer_activity SET user = ?, activity =  ? WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -97,7 +93,7 @@ class VolunteerActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM _volunteerActivity WHERE id = ?";
+    $sql = "DELETE FROM volunteer_activity WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -111,7 +107,7 @@ class VolunteerActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM  _volunteerActivity";
+    $sql = "SELECT * FROM  volunteer_activity";
 
     $sth = $db->prepare($sql);
 
