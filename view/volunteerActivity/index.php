@@ -24,8 +24,8 @@ $schedules = $scheduleDao->getAll();
 						<h1><i class="far fa-calendar-plus"></i> Voluntário em evento</h1>
 						<hr>
 						<div class="form-group">
-						    <label for="description">Descrição do evento</label>
-						    <input type="text" class="form-control" id="description" name="description" placeholder="Fale um pouco sobre o evento">
+						    <label for="description">Descrição das atividades do voluntário</label>
+						    <input type="text" class="form-control" id="description" name="description" placeholder="Descreva como o voluntário irá colaborar">
 					  	</div>
 						<div class="form-group">
 									<label for="schedule_category">Selecione o evento</label>

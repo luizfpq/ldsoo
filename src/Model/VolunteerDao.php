@@ -130,7 +130,7 @@ class VolunteerDao
     return $volunteers;
   }
 /**
- * pegamos os eventos não confirmados do voluntario
+ * pegamos os eventos não confirmados do voluntário
  */
   public function getNewEventByVolunteer($id)
   {
@@ -159,7 +159,7 @@ class VolunteerDao
   }
 
   /**
-   * pegamos os eventos não confirmados do voluntario
+   * pegamos os eventos não confirmados do voluntário
    */
     public function getActiveEventByVolunteer($id)
     {

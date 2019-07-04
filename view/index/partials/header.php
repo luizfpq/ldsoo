@@ -51,10 +51,10 @@
 				  </li>
 				  <li class="nav-item">
 				    <?php
-				  	if($page_subject == "Voluntarios")
-				    	echo '<a class="nav-link active" href="#"><i class="fas fa-hands-helping"></i> Voluntarios</a>';
+				  	if($page_subject == "Voluntários")
+				    	echo '<a class="nav-link active" href="#"><i class="fas fa-hands-helping"></i> Voluntários</a>';
 				    else
-				    	echo '<a class="nav-link" href="index.php?controller=Volunteer&action=index">Voluntarios</a>';
+				    	echo '<a class="nav-link" href="index.php?controller=Volunteer&action=index">Voluntários</a>';
 				    ?>
 				  </li>
 				</ul>

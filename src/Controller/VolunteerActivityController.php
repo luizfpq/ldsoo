@@ -70,7 +70,8 @@ class VolunteerActivityController extends Controller
       }
       catch(Exception $e)
       {
-        $message->addWarning($e->getMessage());
+
+        $message->addWarning(var_dump($e->getMessage()));
       }
     }
     else
