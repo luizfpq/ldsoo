@@ -22,7 +22,7 @@ class VolunteerController extends Controller
     $volunteers = $volunteerDao->getAll();
 
     $viewModel = array(
-        'volunteers' => $volunteers,
+      'volunteers' => $volunteers,
     );
 
     $this->showView($viewModel);
@@ -51,39 +51,39 @@ class VolunteerController extends Controller
 
       try
       {
-          $warnings = array();
+        $warnings = array();
 
-          if(!$username)
-            $warnings[] = 'Username';
+        if(!$username)
+        $warnings[] = 'Username';
 
-          if(!$email)
-            $warnings [] = 'E-mail';
+        if(!$email)
+        $warnings [] = 'E-mail';
 
-           if(!$password)
-            $warnings [] = 'Senha';
+        if(!$password)
+        $warnings [] = 'Senha';
 
-          if(sizeof($warnings))
-            throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
-
-
-          $volunteer = new Volunteer();
-          $volunteerDao = new VolunteerDao();
-
-          $volunteer->setUsername($username);
-          $volunteer->setEmail($email);
-          $volunteer->setPassword($password);
-          $volunteer->setRole($role);
+        if(sizeof($warnings))
+        throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
 
 
+        $volunteer = new Volunteer();
+        $volunteerDao = new VolunteerDao();
+
+        $volunteer->setUsername($username);
+        $volunteer->setEmail($email);
+        $volunteer->setPassword($password);
+        $volunteer->setRole($role);
 
 
-          $volunteerId = $volunteerDao->create($volunteer);
 
-          $volunteer->setId($volunteerId);
 
-          $this->setRoute($this->view->getVolunteerRoute());
+        $volunteerId = $volunteerDao->create($volunteer);
 
-          $message->addMessage('Usuário adicionado com sucesso.');
+        $volunteer->setId($volunteerId);
+
+        $this->setRoute($this->view->getVolunteerRoute());
+
+        $message->addMessage('Usuário adicionado com sucesso.');
       }
       catch(Exception $e)
       {
@@ -100,8 +100,8 @@ class VolunteerController extends Controller
   }
 
   /*
-    O Controlador recebe da view uma ação, que deverá ser executada pelo Model.
-    O Model realiza a ação e prepara os dados para a view, por meio do Controller.
+  O Controlador recebe da view uma ação, que deverá ser executada pelo Model.
+  O Model realiza a ação e prepara os dados para a view, por meio do Controller.
 
   */
   public function listAction() {
@@ -115,7 +115,7 @@ class VolunteerController extends Controller
     $volunteers = $volunteerDao->getAll();
 
     $viewModel = array(
-        'volunteers' => $volunteers,
+      'volunteers' => $volunteers,
     );
 
     //$message->addMessage('Listando voluntários.');
@@ -140,7 +140,7 @@ class VolunteerController extends Controller
       $volunteerDao->delete($id);
 
       $viewModel = array(
-          'volunteers' => $volunteerDao->getAll()
+        'volunteers' => $volunteerDao->getAll()
       );
     }
     else
@@ -148,7 +148,7 @@ class VolunteerController extends Controller
       $this->setRoute($this->view->getDeleteRoute());
 
       $viewModel = array(
-          'volunteer' => $volunteerDao->getById($id)
+        'volunteer' => $volunteerDao->getById($id)
       );
     }
 
@@ -201,7 +201,7 @@ class VolunteerController extends Controller
       $volunteerDao = new VolunteerDao();
 
       $viewModel = array(
-          'volunteer' => $volunteerDao->getById($id)
+        'volunteer' => $volunteerDao->getById($id)
       );
     }
 
@@ -209,10 +209,42 @@ class VolunteerController extends Controller
 
   }
 
-  public function acceptAction(){
+  public function OLDacceptAction(){
 
     $message = Message::singleton();
 
+    $this->setRoute($this->view->getAcceptRoute());
+
+
+    $volunteerDao = new VolunteerDao();
+
+    $volunteers = $volunteerDao->getAll();
+
+    $viewModel = array(
+      'volunteers' => $volunteers,
+    );
+
+    $this->showView($viewModel);
+
+  }
+
+  public function acceptEventAction(){
+
+    $message = Message::singleton();
+
+    $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
+
+    if (isset($_REQUEST['id'])) {
+
+      $dao = new VolunteerActivityDao();
+      $dao->acceptEvent($id);
+      $message->addWarning('Evento ignorado');
+      $message->save();
+    } else {
+      $message->addWarning('erro ao ignorar evento');
+      $message->save();
+
+    }
     $this->setRoute($this->view->getAcceptRoute());
 
     $volunteerDao = new VolunteerDao();
@@ -220,14 +252,42 @@ class VolunteerController extends Controller
     $volunteers = $volunteerDao->getAll();
 
     $viewModel = array(
-        'volunteers' => $volunteers,
+      'volunteers' => $volunteers,
     );
 
     $this->showView($viewModel);
 
   }
 
+  public function ignoreEventAction(){
 
+    $message = Message::singleton();
 
+    $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
+
+    if (isset($_REQUEST['id'])) {
+
+      $dao = new VolunteerActivityDao();
+      $dao->ignoreEvent($id);
+      $message->addWarning('Evento ignorado');
+      $message->save();
+    } else {
+      $message->addWarning('erro ao ignorar evento');
+      $message->save();
+
+    }
+    $this->setRoute($this->view->getAcceptRoute());
+
+    $volunteerDao = new VolunteerDao();
+
+    $volunteers = $volunteerDao->getAll();
+
+    $viewModel = array(
+      'volunteers' => $volunteers,
+    );
+
+    $this->showView($viewModel);
+
+  }
 
 }

@@ -10,7 +10,7 @@ class VolunteerActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO volunteer_activity (_user, activity, time, sector, volunteer, schedule, date) VALUES (?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO volunteer_activity (_user, activity, time, sector, volunteer, schedule, date, description) VALUES (?,?,?,?,?,?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -28,7 +28,7 @@ class VolunteerActivityDao{
 
 		$sth->bindValue(7, $volunteerActivity->getDate(), PDO::PARAM_STR);
 
-
+		$sth->bindValue(8, $volunteerActivity->getDescription(), PDO::PARAM_STR);
 
 
     if($sth->execute())
@@ -94,6 +94,7 @@ class VolunteerActivityDao{
   }
 
 
+
   public function delete($id){
 
     $db = Database::singleton();
@@ -133,5 +134,36 @@ class VolunteerActivityDao{
 
     return $volunteerActivities;
   }
+
+	public function acceptEvent($id){
+
+    $db = Database::singleton();
+
+    $sql = "UPDATE volunteer_activity SET accept = 1 WHERE id = ?";
+
+    $sth = $db->prepare($sql);
+
+    $sth->bindValue(1, $id, PDO::PARAM_STR);
+
+    $sth->execute();
+
+		return $sth;
+
+  }
+
+
+		public function ignoreEvent($id){
+
+	    $db = Database::singleton();
+
+	    $sql = "UPDATE volunteer_activity SET accept = '0' WHERE id = ?";
+
+	    $sth = $db->prepare($sql);
+
+	    $sth->bindValue(1, $id, PDO::PARAM_STR);
+
+	    $sth->execute();
+
+	  }
 
 }

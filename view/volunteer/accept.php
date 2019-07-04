@@ -20,16 +20,16 @@
 								<h5 class="card-title float-left"> Confirmados</h5>
 							</div>
 							<?php
-								foreach($ActiveEvent as $event) {
+								foreach($activeEvent as $event) {
 							echo'
 							<div class="card-body">
 									<div class="list-group">
 									<div class="list-group-item list-group-item-action">
 										<div class="d-flex w-100 justify-content-between">
-											<h5 class="mb-1">'. $event['name'] .'</h5>
+											<h6>'. $event['name'] .'</h6>
 											<small>Dia: '. $event["date"] .' &middot; Hora: '. $event['time'] .'</small>
 										</div>
-										<p class="mb-1">'. $event['description'] .'</p>
+										<p>'. $event['description'] .'</p>
 									</div>
 
 								</div>
@@ -52,11 +52,15 @@
 									<div class="list-group">
 									<div class="list-group-item list-group-item-action">
 										<div class="d-flex w-100 justify-content-between">
-											<h5 class="mb-1">'. $event['name'] .'</h5>
+											<h6>'. $event['name'] .'</h6>
 											<small>Dia: '. $event["date"] .' &middot; Hora: '. $event['time'] .'</small>
 										</div>
-										<p class="mb-1">'. $event['description'] .'<a href="?controller=Volunteer&amp;action=accept" class="btn btn-sm volunteers btn-primary float-right">
-									<small><i class="fas fa-check" aria-hidden="true"></i> Aceitar </small></a></p>
+										<p>'. $event['description'] .'
+											<a href="?controller=Volunteer&action=acceptEvent&id='.$event['id'].'" class="btn btn-sm volunteer btn-primary float-right">
+										  <small><i class="fas fa-check" aria-hidden="true"></i> Aceitar </small></a>&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="?controller=Volunteer&action=ignoreEvent&id='.$event['id'].'" class="btn btn-sm activities btn-primary float-right">
+										  <small><i class="fas fa-check" aria-hidden="true"></i> Negar </small></a>
+									</p>
 
 								</div>
 							</div>';

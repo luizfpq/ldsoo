@@ -30,6 +30,7 @@ class VolunteerActivityController extends Controller
       $schedule = explode(',', $schedule);
       $date = $schedule[1];
       $schedule = $schedule[0];
+      $description = isset($_POST['description']) ? $_POST['description'] : null;
 
 
       try
@@ -54,6 +55,7 @@ class VolunteerActivityController extends Controller
           $volunteerActivity->setVolunteer($volunteer);
           $volunteerActivity->setSchedule($schedule);
           $volunteerActivity->setDate($date);
+          $volunteerActivity->setDescription($description);
 
 
           $volunteerActivityId = $volunteerActivityDao->create($volunteerActivity);
@@ -74,7 +76,7 @@ class VolunteerActivityController extends Controller
           $message->addWarning("Voluntário já participa de outro evento nesta data e horário!");
         } else {
           $message->addWarning(var_dump($e->getMessage()));
-          
+
         }
         $this->setRoute($this->view->getVolunteerActivityRoute());
       }

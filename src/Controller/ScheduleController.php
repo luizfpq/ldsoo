@@ -212,4 +212,9 @@ class ScheduleController extends Controller
     $this->showView();
   }
 
+  public function listCalendarAction() {
+    $dao = new ScheduleDao();
+    $dao->listCalendar();
+  }
+
 }

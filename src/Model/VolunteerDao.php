@@ -137,7 +137,7 @@ class VolunteerDao
 
     $db = Database::singleton();
 
-    $sql = "select *
+    $sql = "select volunteer_activity.id, schedule.description as name, volunteer_activity.description, volunteer_activity.time, schedule.date
     from volunteer_activity, volunteer, schedule, activity
     where activity.id = volunteer_activity.activity
           and schedule.id = volunteer_activity.schedule
@@ -166,7 +166,7 @@ class VolunteerDao
 
       $db = Database::singleton();
 
-      $sql = "select *
+      $sql = "select volunteer_activity.id, schedule.description as name, volunteer_activity.description, volunteer_activity.time, schedule.date
       from volunteer_activity, volunteer, schedule, activity
       where activity.id = volunteer_activity.activity
             and schedule.id = volunteer_activity.schedule

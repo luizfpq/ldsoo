@@ -121,4 +121,25 @@ class ScheduleDao{
     return $schedules;
   }
 
+	public function listCalendar(){
+
+		$db = Database::singleton();
+
+		$sql = "select description as title, date as start from schedule";
+
+		$sth = $db->prepare($sql);
+
+		$sth->execute();
+
+		$schedule = array();
+
+		while($obj = $sth->fetch(PDO::FETCH_ASSOC))
+		{
+			$schedules[] = $obj;
+
+		}
+
+    echo json_encode($schedules);
+	}
+
 }
