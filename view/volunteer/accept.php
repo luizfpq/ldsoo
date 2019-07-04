@@ -20,7 +20,7 @@
 								<h5 class="card-title float-left"> Confirmados</h5>
 							</div>
 							<?php
-								foreach($newEvent as $event) {
+								foreach($ActiveEvent as $event) {
 							echo'
 							<div class="card-body">
 									<div class="list-group">
@@ -46,7 +46,7 @@
 								<h5 class="card-title float-left">Não Confirmados</h5>
 							</div>
 							<?php
-								foreach($activeEvent as $event) {
+								foreach($newEvent as $event) {
 							echo'
 							<div class="card-body">
 									<div class="list-group">
