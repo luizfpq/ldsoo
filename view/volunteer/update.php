@@ -11,7 +11,7 @@
 
 				<div class="row">
 					<div class="col-md-8">
-						<h1><i class="fas fa-hands-helping"></i> Novo volunt&aacute;rio</h1>
+						<h1><i class="fas fa-hands-helping"></i> Editar volunt&aacute;rio</h1>
 						<hr>
 						<div class="form-group">
 						    <label for="name">Nome do volunt&aacute;rio</label>
@@ -35,13 +35,7 @@
 
 		        </div>
 					</div>
-					<div class="card col">
-						<div class="card-header">
-							<h5 class="card-title float-left"><i class="far fa-calendar"></i> Data do evento</h5>
-						</div>
-					  <div class="card-body datepicker-here" data-language='pt-BR'>
-					  </div>
-					</div>
+					
 				</div>
 
 				<div class="row">
@@ -51,17 +45,3 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() {
-	  var calendarEl = document.getElementById('calendar');
-
-	  var calendar = new FullCalendar.Calendar(calendarEl, {
-	    plugins: [ 'dayGrid' ],
-	    timeZone: 'UTC',
-	    defaultView: 'dayGridMonth',
-	    events: 'https://fullcalendar.io/demo-events.json'
-	  });
-	  calendar.setOption('locale', 'pt-br');
-	  calendar.render();
-	});
-</script>

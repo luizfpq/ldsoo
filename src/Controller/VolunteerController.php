@@ -135,7 +135,7 @@ class VolunteerController extends Controller
 
     if(isset($_REQUEST['submit']))
     {
-      $this->setRoute($this->view->getListRoute());
+      $this->setRoute($this->view->getVolunteerRoute());
 
       $volunteerDao->delete($id);
 
@@ -187,7 +187,7 @@ class VolunteerController extends Controller
       $volunteerDao = new VolunteerDao();
       $volunteerDao->update($volunteer);
 
-      $this->setRoute($this->view->getListRoute());
+      $this->setRoute($this->view->getVolunteerRoute());
 
       $viewModel = array(
         'volunteers' => $volunteerDao->getAll()

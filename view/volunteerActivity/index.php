@@ -61,15 +61,14 @@ $schedules = $scheduleDao->getAll();
 				<label for="schedule_category">Selecione o voluntário</label>
 					<input type="time" name="time" id="time" class="form-control">
 				</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md">
-
-						<input type="hidden" name="user" value="<?php echo $user->getId(); ?>">
 				<div class="row">
 					<button type="submit" class="col btn btn-lg btn-primary" name="submit"><i class="far fa-calendar-plus"></i> Novo evento</button>
 				</div>
+				</div>
+
+				<input type="hidden" name="user" value="<?php echo $user->getId(); ?>">
+
+
 			</form>
 		</div>
 	</div>
