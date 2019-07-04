@@ -7,17 +7,17 @@ class VolunteerView
 
 	const createRoute = 'view/volunteer/create.php';
 
-  	const updateRoute = 'view/volunteer/update.php';
+  const updateRoute = 'view/volunteer/update.php';
 
-  	const deleteRoute = 'view/volunteer/delete.php';
+  const deleteRoute = 'view/volunteer/delete.php';
 
-  	const detailsRoute = 'view/volunteer/details.php';
+  const detailsRoute = 'view/volunteer/details.php';
 
-  	const listRoute = 'view/volunteer/list.php';
+  const listRoute = 'view/volunteer/list.php';
 
-  	public function __construct(){}
+  public function __construct(){}
 
-  	public function getVolunteerRoute(){
+  public function getVolunteerRoute(){
 
     	return self::volunteerRoute;
   	}

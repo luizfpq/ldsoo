@@ -52,6 +52,6 @@ done
 
 echo "Git OK,thanks for your use." 2>&1
 
-echo "Creating tar file"
-rm -rf /var/www/html/ldsoo.tar.gz
-tar -zcvf /var/www/html/ldsoo.tar.gz /var/www/html/ldsoo
+#echo "Creating tar file"
+#rm -rf /var/www/html/ldsoo.tar.gz
+#tar -zcvf /var/www/html/ldsoo.tar.gz /var/www/html/ldsoo
