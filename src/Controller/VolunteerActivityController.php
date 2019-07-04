@@ -70,8 +70,13 @@ class VolunteerActivityController extends Controller
       }
       catch(Exception $e)
       {
-
-        $message->addWarning(var_dump($e->getMessage()));
+        if (strpos($e->getMessage(), 'Unique violation')){
+          $message->addWarning("Voluntário já participa de outro evento nesta data e horário!");
+        } else {
+          $message->addWarning(var_dump($e->getMessage()));
+          
+        }
+        $this->setRoute($this->view->getVolunteerActivityRoute());
       }
     }
     else
