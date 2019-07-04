@@ -208,4 +208,26 @@ class VolunteerController extends Controller
     $this->showView($viewModel);
 
   }
+
+  public function acceptAction(){
+
+    $message = Message::singleton();
+
+    $this->setRoute($this->view->getAcceptRoute());
+
+    $volunteerDao = new VolunteerDao();
+
+    $volunteers = $volunteerDao->getAll();
+
+    $viewModel = array(
+        'volunteers' => $volunteers,
+    );
+
+    $this->showView($viewModel);
+
+  }
+
+
+
+
 }

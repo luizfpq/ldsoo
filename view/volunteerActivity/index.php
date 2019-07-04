@@ -32,7 +32,7 @@ $schedules = $scheduleDao->getAll();
 									<select class="form-control" id="schedule" name="schedule">
 										<?php
 											 foreach($schedules as $schedule) {
-												 echo "<option value='{$schedule->getId()}'>{$schedule->getDate()} &middot; {$schedule->getDescription()}</option>";
+												 echo "<option value='{$schedule->getId()},{$schedule->getDate()}'>{$schedule->getDate()} &middot; {$schedule->getDescription()}</option>";
 											 }
 										 ?>
 									</select>

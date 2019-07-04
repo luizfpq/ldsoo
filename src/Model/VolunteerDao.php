@@ -129,4 +129,61 @@ class VolunteerDao
 
     return $volunteers;
   }
+/**
+ * pegamos os eventos não confirmados do voluntario
+ */
+  public function getNewEventByVolunteer($id)
+  {
+
+    $db = Database::singleton();
+
+    $sql = "select *
+    from volunteer_activity, volunteer, schedule, activity
+    where activity.id = volunteer_activity.activity
+          and schedule.id = volunteer_activity.schedule
+          and volunteer.id = volunteer_activity.volunteer
+          and volunteer.id = ?
+          and volunteer_activity.accept = -1
+    order by schedule.date asc";
+
+    $sth = $db->prepare($sql);
+
+    $sth->bindValue(1, $id, PDO::PARAM_STR);
+
+    $sth->execute();
+
+    if ($data = $sth->fetchAll()) {
+      return $data;
+    }
+
+  }
+
+  /**
+   * pegamos os eventos não confirmados do voluntario
+   */
+    public function getActiveEventByVolunteer($id)
+    {
+
+      $db = Database::singleton();
+
+      $sql = "select *
+      from volunteer_activity, volunteer, schedule, activity
+      where activity.id = volunteer_activity.activity
+            and schedule.id = volunteer_activity.schedule
+            and volunteer.id = volunteer_activity.volunteer
+            and volunteer.id = ?
+            and volunteer_activity.accept = 1
+      order by schedule.date asc";
+
+      $sth = $db->prepare($sql);
+
+      $sth->bindValue(1, $id, PDO::PARAM_STR);
+
+      $sth->execute();
+
+      if ($data = $sth->fetchAll()) {
+        return $data;
+      }
+    }
+
 }

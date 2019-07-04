@@ -27,6 +27,9 @@ class VolunteerActivityController extends Controller
       $sector = $volunteer[1];
       $volunteer = $volunteer[0];
       $schedule = isset($_POST['schedule']) ? $_POST['schedule'] : null;
+      $schedule = explode(',', $schedule);
+      $date = $schedule[1];
+      $schedule = $schedule[0];
 
 
       try
@@ -50,6 +53,7 @@ class VolunteerActivityController extends Controller
           $volunteerActivity->setSector($sector);
           $volunteerActivity->setVolunteer($volunteer);
           $volunteerActivity->setSchedule($schedule);
+          $volunteerActivity->setDate($date);
 
 
           $volunteerActivityId = $volunteerActivityDao->create($volunteerActivity);

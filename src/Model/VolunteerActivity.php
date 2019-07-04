@@ -10,6 +10,8 @@ class VolunteerActivity{
     private $volunteer;
     private $schedule;
 		private $description;
+		private $date;
+
 
 	public function __construct(){}
 
@@ -37,7 +39,7 @@ class VolunteerActivity{
 
     public function setCreate($create){$this->create = $create;}
 
-	public function getVolunteer(){ return $this->volunteer;}
+		public function getVolunteer(){ return $this->volunteer;}
 
     public function setVolunteer($volunteer){$this->volunteer = $volunteer;}
 
@@ -48,4 +50,8 @@ class VolunteerActivity{
 		public function getDescription(){ return $this->schedule;}
 
     public function setDescription($description){ $this->description = $description;}
+
+		public function getDate(){ return $this->schedule;}
+
+		public function setDate($date){ $this->date = $date;}
 }

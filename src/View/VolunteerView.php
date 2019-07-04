@@ -15,6 +15,8 @@ class VolunteerView
 
   const listRoute = 'view/volunteer/list.php';
 
+	const acceptRoute = 'view/volunteer/accept.php';
+
   public function __construct(){}
 
   public function getVolunteerRoute(){
@@ -46,6 +48,9 @@ class VolunteerView
 
 	    return self::listRoute;
 	  }
+		public function getAcceptRoute(){
 
+			return self::acceptRoute;
+		}
 
 }

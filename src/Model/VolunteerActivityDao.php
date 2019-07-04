@@ -10,7 +10,7 @@ class VolunteerActivityDao{
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO volunteer_activity (_user, activity, time, sector, volunteer, schedule) VALUES (?,?,?,?,?,?)";
+    $sql = "INSERT INTO volunteer_activity (_user, activity, time, sector, volunteer, schedule, date) VALUES (?,?,?,?,?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -24,7 +24,10 @@ class VolunteerActivityDao{
 
     $sth->bindValue(5, $volunteerActivity->getVolunteer(), PDO::PARAM_STR);
 
-    $sth->bindValue(6, $volunteerActivity->getSchedule(), PDO::PARAM_STR);
+		$sth->bindValue(6, $volunteerActivity->getSchedule(), PDO::PARAM_STR);
+
+		$sth->bindValue(7, $volunteerActivity->getDate(), PDO::PARAM_STR);
+
 
 
 
@@ -82,6 +85,8 @@ class VolunteerActivityDao{
     $sth->bindValue(7, $volunteerActivity->getVolunteer(), PDO::PARAM_STR);
 
     $sth->bindValue(8, $volunteerActivity->getSchedule(), PDO::PARAM_STR);
+
+		$sth->bindValue(9, $volunteerActivity->getDate(), PDO::PARAM_STR);
 
 
     $sth->execute();
