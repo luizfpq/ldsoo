@@ -47,7 +47,7 @@ class VolunteerActivity{
 
     public function setSchedule($schedule){ $this->schedule = $schedule;}
 
-		public function getDescription(){ return $this->schedule;}
+		public function getDescription(){ return $this->description;}
 
     public function setDescription($description){ $this->description = $description;}
 

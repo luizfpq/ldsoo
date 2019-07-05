@@ -37,7 +37,7 @@
 						}
 							?>
 							<div class="card-footer">
-								<span><i class="fas fa-tags"></i> Leilão, Curso, Almoço</span>
+								<!-- <span><i class="fas fa-tags"></i> Leilão, Curso, Almoço</span> -->
 							</div>
 						</div>
 						<br />
@@ -67,7 +67,7 @@
 						}
 							?>
 							<div class="card-footer">
-								<span><i class="fas fa-tags"></i> Leilão, Curso, Almoço</span>
+								<!-- <span><i class="fas fa-tags"></i> Leilão, Curso, Almoço</span> -->
 							</div>
 						</div>
 					</div>

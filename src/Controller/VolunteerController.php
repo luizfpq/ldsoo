@@ -241,8 +241,8 @@ class VolunteerController extends Controller
       $message->addWarning('Evento ignorado');
       $message->save();
     } else {
-      $message->addWarning('erro ao ignorar evento');
-      $message->save();
+      //$message->addWarning('erro ao ignorar evento');
+      //$message->save();
 
     }
     $this->setRoute($this->view->getAcceptRoute());
@@ -272,8 +272,8 @@ class VolunteerController extends Controller
       $message->addWarning('Evento ignorado');
       $message->save();
     } else {
-      $message->addWarning('erro ao ignorar evento');
-      $message->save();
+      //$message->addWarning('erro ao ignorar evento');
+      //$message->save();
 
     }
     $this->setRoute($this->view->getAcceptRoute());
