@@ -238,7 +238,7 @@ class VolunteerController extends Controller
 
       $dao = new VolunteerActivityDao();
       $dao->acceptEvent($id);
-      $message->addWarning('Evento ignorado');
+      $message->addWarning('Evento Aceito');
       $message->save();
     } else {
       //$message->addWarning('erro ao ignorar evento');
